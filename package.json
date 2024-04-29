@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "firebase": "^10.11.1"
+  },
+  "devDependencies": {
+    "css-loader": "^6.11.0",
+    "jquery": "^3.7.1",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.91.0",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "bundle-report": "webpack-bundle-analyzer --port 4200 dist/stats.json"
+  }
+}

@@ -1,0 +1,36 @@
+/* Desktop / laptops / tablets */
+@media (min-width: 700px) {   
+    button {
+        font-family: "Fira Code", monospace;
+        font-size: 20px;
+        padding: 10px 25px;
+        border-radius: 5px;
+    }    
+}
+
+/* Phones */
+@media (max-width: 700px) {    
+    button {
+        font-family: "Fira Code", monospace;
+        font-size: 15px;
+        padding: 10px 25px;
+        border-radius: 5px;
+    }    
+}
+
+.btn-normal {
+    color: black;
+    background-color: var(--gray);
+    border: 3px solid var(--gray);
+    transition-duration: 0.3s;
+}
+
+.btn-normal:hover:enabled {
+    background-color: var(--gray-alt);
+    border: 3px solid var(--gray-alt);
+}
+
+button:disabled {
+    background-color: #efefef;
+    color: black;
+}

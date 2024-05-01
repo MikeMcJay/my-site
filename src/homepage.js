@@ -81,14 +81,3 @@ const githubRef = ref(storage, "images/icons/github.svg");
 getDownloadURL(githubRef).then((url) => {
     github.src = url;
 });
-
-if (this.document.documentElement.clientWidth < 800) {
-
-} else {
-    window.addEventListener('resize', function(event) {
-        /* Remove button */
-        if (this.document.documentElement.clientWidth < 800) {
-            
-        }
-    }, true);
-}

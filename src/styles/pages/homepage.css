@@ -88,10 +88,10 @@
         margin-right: 10px;
     }
     .projectText {
-        order: 1;
+        padding: 20px;
         margin-top: -40px;
         display:inline-block; 
-        width: 375px; 
+        width: 320px; 
         vertical-align: middle; 
     }
     .projectSubtitle {
@@ -99,7 +99,6 @@
         margin-right: 10px;
     }
     .projectButton {
-        order: 2;
         display:inline-block; 
         text-align: center; 
         width: 300px; 
@@ -120,19 +119,19 @@
     }
     /* Project highlight text styles */
     #stephs60th.projectTitle {
-        font-size: 60px; 
+        font-size: 50px; 
     }
     #replicate.projectTitle {
-        font-size: 60px; 
+        font-size: 45px; 
     }
     #lovecastle.projectTitle {
-        font-size: 60px; 
+        font-size: 45px; 
     }
     #collectACard.projectTitle {
-        font-size: 60px; 
+        font-size: 50px; 
     }
     #rateATune.projectTitle {
-        font-size: 60px; 
+        font-size: 45px; 
     }
     #linkedIn, #github, #gitlab {
         width: 25px;

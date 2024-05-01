@@ -1,8 +1,8 @@
 {
-  "hash": "5edc8ef8b465eb574ff1",
+  "hash": "4ae26c97d17d1121eb9f",
   "version": "5.91.0",
-  "time": 1066,
-  "builtAt": 1714588243066,
+  "time": 1237,
+  "builtAt": 1714595845758,
   "publicPath": "auto",
   "outputPath": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\public\\bundles",
   "assetsByChunkName": {
@@ -19,13 +19,13 @@
     {
       "type": "asset",
       "name": "pages/homepage.bundle.js",
-      "size": 2394364,
+      "size": 2394074,
       "emitted": false,
       "comparedForEmit": true,
       "cached": false,
       "info": {
         "javascriptModule": false,
-        "size": 2394364
+        "size": 2394074
       },
       "chunkNames": [
         "pages/homepage"
@@ -67,12 +67,12 @@
     {
       "type": "asset",
       "name": "./styles/pages/homepage.css",
-      "size": 14573,
+      "size": 14560,
       "emitted": true,
-      "comparedForEmit": false,
+      "comparedForEmit": true,
       "cached": false,
       "info": {
-        "size": 14573
+        "size": 14560
       },
       "chunkNames": [
         "pages/homepage"
@@ -9208,10 +9208,10 @@
       "initial": true,
       "entry": true,
       "recorded": false,
-      "size": 2207352,
+      "size": 2207076,
       "sizes": {
-        "javascript": 2193567,
-        "css/mini-extract": 12627,
+        "javascript": 2193304,
+        "css/mini-extract": 12614,
         "runtime": 1158
       },
       "names": [
@@ -9228,7 +9228,7 @@
       "auxiliaryFiles": [
         "81f6c7f882fcc2dee106.ttf"
       ],
-      "hash": "8318353d0c1d157615f7",
+      "hash": "2b31e614f4a622732d17",
       "childrenByOrder": {},
       "id": "pages/homepage",
       "siblings": [],
@@ -17696,9 +17696,9 @@
           "type": "module",
           "moduleType": "javascript/auto",
           "layer": null,
-          "size": 2991,
+          "size": 2728,
           "sizes": {
-            "javascript": 2991
+            "javascript": 2728
           },
           "built": true,
           "codeGenerated": true,
@@ -18465,9 +18465,9 @@
         {
           "type": "module",
           "moduleType": "css/mini-extract",
-          "size": 6023,
+          "size": 6010,
           "sizes": {
-            "css/mini-extract": 6023
+            "css/mini-extract": 6010
           },
           "built": true,
           "codeGenerated": true,
@@ -18724,9 +18724,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 2991,
+      "size": 2728,
       "sizes": {
-        "javascript": 2991
+        "javascript": 2728
       },
       "built": true,
       "codeGenerated": true,
@@ -20602,9 +20602,9 @@
     {
       "type": "module",
       "moduleType": "css/mini-extract",
-      "size": 6023,
+      "size": 6010,
       "sizes": {
-        "css/mini-extract": 6023
+        "css/mini-extract": 6010
       },
       "built": true,
       "codeGenerated": true,
@@ -28198,9 +28198,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 6789,
+      "size": 6775,
       "sizes": {
-        "javascript": 6789
+        "javascript": 6775
       },
       "built": true,
       "codeGenerated": true,
@@ -29646,15 +29646,15 @@
       "assets": [
         {
           "name": "./styles/pages/homepage.css",
-          "size": 14573
+          "size": 14560
         },
         {
           "name": "pages/homepage.bundle.js",
-          "size": 2394364
+          "size": 2394074
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 2408937,
+      "assetsSize": 2408634,
       "auxiliaryAssets": [
         {
           "name": "81f6c7f882fcc2dee106.ttf",
@@ -29706,15 +29706,15 @@
       "assets": [
         {
           "name": "./styles/pages/homepage.css",
-          "size": 14573
+          "size": 14560
         },
         {
           "name": "pages/homepage.bundle.js",
-          "size": 2394364
+          "size": 2394074
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 2408937,
+      "assetsSize": 2408634,
       "auxiliaryAssets": [
         {
           "name": "81f6c7f882fcc2dee106.ttf",

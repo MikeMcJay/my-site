@@ -3,87 +3,186 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.11.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.11.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <title>MikeMcJay</title>
+    <link rel="stylesheet" href="./bundles/styles/pages/homepage.css">
+    <script src="./bundles/pages/homepage.bundle.js" type="module"></script>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <div id="popup"></div>
+
+    <div class="navbar topnav-default">
+      <div class="navbar-left">
+      </div>
+      <div class="navbar-right">
+        <a href="https://www.linkedin.com/in/jason-michael-mcneill" target="_blank"><img id="linkedIn"></a>
+        <a href="https://gitlab.com/jason-mcneill" target="_blank"><img id="gitlab"></a>
+        <a href="https://github.com/MikeMcJay" target="_blank"><img id="github"></a>
+      </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <div id="content">
+      <div style="margin:0 auto;">
+        <p id="mikemcjay"></p>
+        <h2 id="_" style="opacity: 1.0;">_</h2>
+        <h2 id="subtitle">ANDROID AND WEB DEVELOPER</h2>
+      </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+      <div id="about">
+        <p>Hi. My name is Jason McNeill and I am a recent computer science graduate who studied at Newcastle University.
+        </p>
+        <p>I love the idea of being able to create something useful for the world, whether that is an app, a website or a
+          game, so I am often experimenting with new concepts, technologies and programming languages.
+        </p>
+      </div>
+
+      <h2>PROJECT HIGHLIGHTS</h2>
+
+      <div class="projectBanner" id="stephs60th">
+        <!-- <div id="languages" style="text-align: right; margin-right: 20px;">
+          <div id="javascript" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Javascript</p>
+          </div>
+          <div id="html" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">HTML</p>
+          </div>
+          <div id="css" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">CSS</p>
+          </div>
+          <div id="firebase" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Firebase</p>
+          </div>
+          <div id="nodeJS" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Node.js</p>
+          </div>
+        </div> -->
+        
+        <div id="stephs60th" class="projectText">
+          <h2 id="stephs60th" class="projectTitle">Steph's 60th</h2>
+          <p id="stephs60th" class="projectSubtitle">An RSVP website for a surprise 60th birthday.</p>
+        </div>
+        <div id="stephs60th" class="projectButton">
+          <a href="https://stephs60th.com" target="_blank"><button class="btn-alternative">View website</button></a>
+        </div>
+      </div>
+
+      <div class="projectBanner" id="replicate">
+        <!-- <div id="languages" style="text-align: left; margin-left: 20px;">
+          <div id="android" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Android</p>
+          </div>
+          <div id="kotlin" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Kotlin</p>
+          </div>
+          <div id="jetpack" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Jetpack Compose</p>
+          </div>
+          <div id="firebase" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Firebase</p>
+          </div>
+        </div> -->
+        <div id="replicate" class="projectButton">
+          <a href="https://replicate.fit" target="_blank"><button class="btn-alternative">View website</button></a>
+        </div>
+        <div id="replicate" class="projectText">
+          <h2 id="replicate" class="projectTitle">Replicate</h2>
+          <p id="replicate" class="projectSubtitle">A fitness app built for Android phones and smartwatches.</p>
+        </div>
+      </div>
+
+      <div class="projectBanner" id="lovecastle">
+        <!-- <div id="languages" style="text-align: right; margin-right: 20px;">
+          <div id="javascript" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Javascript</p>
+          </div>
+          <div id="html" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">HTML</p>
+          </div>
+          <div id="css" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">CSS</p>
+          </div>
+          <div id="firebase" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Firebase</p>
+          </div>
+          <div id="nodeJS" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Node.js</p>
+          </div>
+        </div> -->
+        <div id="lovecastle" class="projectText">
+          <h2 id="lovecastle" class="projectTitle">Lovecastle</h2>
+          <p id="lovecastle" class="projectSubtitle">A dating site for the people of Newcastle.</p>
+        </div>
+        <div id="lovecastle" class="projectButton">
+          <a href="https://lovecastle-4176e.web.app" target="_blank"><button class="btn-alternative">View website</button></a>
+        </div>
+      </div>
+
+      <div class="projectBanner" id="collectACard">
+        <!-- <div id="languages" style="text-align: left; margin-left: 20px;">
+          <div id="javascript" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Javascript</p>
+          </div>
+          <div id="html" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">HTML</p>
+          </div>
+          <div id="css" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">CSS</p>
+          </div>
+          <div id="firebase" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Firebase</p>
+          </div>
+          <div id="nodeJS" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Node.js</p>
+          </div>
+          <div id="solidity" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Solidity</p>
+          </div>
+        </div> -->
+        <div id="collectACard" class="projectButton">
+          <a href="https://collect-a-card.web.app" target="_blank"><button class="btn-alternative">View website</button></a>
+        </div>
+        <div id="collectACard" class="projectText">
+          <p id="collectACard" class="projectTitle">Collect a' Card</p>
+          <p id="collectACard" class="projectSubtitle">A site where users can interact with virtual NFTs.</p>
+        </div>
+      </div>
+
+      <div class="projectBanner" id="rateATune">
+        <!-- <div id="languages" style="text-align: right; margin-right: 20px;">
+          <div id="typescript" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Typescript</p>
+          </div>
+          <div id="angular" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Angular</p>
+          </div>
+          <div id="express" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Express</p>
+          </div>
+          <div id="docker" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Docker</p>
+          </div>
+          <div id="mongoDB" class="languageLabel">
+            <p style="padding: 0px 20px; font-size: large; font-weight: bold;">Mongo Db</p>
+          </div>
+        </div> -->
+        <div id="rateATune" class="projectText">
+          <h2 id="rateATune" class="projectTitle">Rate a' Tune</h2>
+          <p id="rateATune" class="projectSubtitle">A service where users can submit ratings and reviews about Spotify songs.</p>
+        </div>
+        <div id="rateATune" class="projectButton">
+          <a href="https://github.com/MikeMcJay/rate-a-tune/" target="_blank"><button class="btn-alternative">View repo</button></a>
+        </div>
+      </div>
+
+      <h2>ALL PROJECTS</h2>
+      <p>~ list</p>
+    </div>
+
+    <div style="text-align: center;">
+      <div id="contact">
+        <p>MikeMcJay 2024</p>
+      </div>
+    </div>
+
+    <div id="loading-screen"></div>
   </body>
 </html>

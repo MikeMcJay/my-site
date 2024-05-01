@@ -7,6 +7,7 @@ module.exports = {
     mode: 'development',
     entry: {
         'pages/config': './src/config.js',
+        'pages/homepage': './src/homepage.js'
     },
     output: {
         filename: '[name].bundle.js',

@@ -1,0 +1,329 @@
+/* Desktop / laptops / tablets */
+@media (min-width: 800px) {
+    #intro {
+        width: 800px;
+    }
+    #mikemcjay, #_ {
+        font-size: 120px; 
+        margin-bottom: -30px;
+    }
+    #about {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .projectText {
+        display:inline-block; 
+        width: 400px; 
+        vertical-align: middle; 
+        margin: 10px;
+    }
+    .projectButton {
+        display:inline-block; 
+        text-align: center; 
+        width: 300px; 
+        vertical-align: middle; 
+        margin: 10px;
+    }
+    .languageLabel {
+        border-radius: 50px; 
+        display:inline-block; 
+        vertical-align: top; 
+        margin-top: 30px; 
+        height: auto;
+    }
+    #collectACard.projectBanner {
+        background-color: #41304c; 
+    }
+    /* Project highlight text styles */
+    #stephs60th.projectText {
+        text-align: left;
+    }
+    #stephs60th.projectTitle {
+        font-size: 90px; 
+    }
+    #replicate.projectText {
+        text-align: right;
+    }
+    #replicate.projectTitle {
+        font-size: 90px; 
+    }
+    #lovecastle.projectText {
+        text-align: left;
+    }
+    #rateATune.projectText {
+        text-align: right;
+    }
+    #lovecastle.projectTitle {
+        font-size: 90px; 
+    }
+    #collectACard.projectText {
+        text-align: right;
+    }
+    #collectACard.projectTitle {
+        font-size: 90px; 
+    }
+    #rateATune.projectText {
+        text-align: left;
+    }
+    #rateATune.projectTitle {
+        font-size: 80px; 
+    }
+    #linkedIn, #github, #gitlab {
+        width: 50px;
+        margin-right: 40px;
+    }
+}
+
+/* Phones */
+@media (max-width: 800px) {
+    #intro {
+        width: 375px;
+    }
+    #mikemcjay, #_ {
+        font-size: 60px; 
+        margin-bottom: -15px;
+    }
+    #about {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .projectText {
+        order: 1;
+        margin-top: -40px;
+        display:inline-block; 
+        width: 375px; 
+        vertical-align: middle; 
+    }
+    .projectSubtitle {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .projectButton {
+        order: 2;
+        display:inline-block; 
+        text-align: center; 
+        width: 300px; 
+        vertical-align: middle; 
+        margin: 10px;
+    }
+    .languageLabel {
+        border-radius: 50px; 
+        display:inline-block; 
+        vertical-align: top; 
+        margin-top: 10px; 
+        height: auto;
+    }
+    #collectACard.projectBanner {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: #bc3766;
+    }
+    /* Project highlight text styles */
+    #stephs60th.projectTitle {
+        font-size: 60px; 
+    }
+    #replicate.projectTitle {
+        font-size: 60px; 
+    }
+    #lovecastle.projectTitle {
+        font-size: 60px; 
+    }
+    #collectACard.projectTitle {
+        font-size: 60px; 
+    }
+    #rateATune.projectTitle {
+        font-size: 60px; 
+    }
+    #linkedIn, #github, #gitlab {
+        width: 25px;
+        margin-top: 15px;
+        margin-right: 10px;
+    }
+}
+
+#mikemcjay {
+    text-align: left; 
+    display:inline-block; 
+    vertical-align: bottom;
+    opacity: 1.0;
+}
+
+#_ {
+    text-align: left; 
+    display:inline-block; 
+    vertical-align: bottom; 
+}
+
+#subtitle {
+    color: black; 
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
+/* Project highlight banners */
+
+.projectBanner {
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+#stephs60th.projectBanner {
+    background-color: #e6d2c7; 
+    color: white; 
+    margin-top: 50px;
+}
+
+#replicate.projectBanner {
+    background-image: linear-gradient(45deg, #49aee2 20%, #19ab5c 80%);
+    color: white;
+}
+
+#lovecastle.projectBanner {
+    background-color: #E2275D; 
+    color: white;
+}
+
+#collectACard.projectBanner {
+    color: white;
+}
+
+#rateATune.projectBanner {
+    background-color: #25d865; 
+    color: white;
+}
+
+/* Project highlight text styles */
+
+#stephs60th.projectText {
+    color: #90463d; 
+}
+
+#stephs60th.projectTitle {
+    font-family: Great Vibes, cursive; 
+    margin-bottom: -20px;
+}
+
+#stephs60th.projectSubtitle {
+    font-family: EB Garamond, serif;
+}
+
+#replicate.projectText {
+    color: black;
+}
+
+#replicate.projectTitle {
+    font-family: Roboto, sans-serif; 
+    margin-bottom: -20px;
+}
+
+#replicate.projectSubtitle {
+    font-family: Roboto, sans-serif;
+}
+
+#lovecastle.projectText {
+    color: white;
+}
+
+#lovecastle.projectTitle {
+    font-family: 'Noto Sans JP', sans-serif; 
+    margin-bottom: -20px;
+}
+
+#lovecastle.projectSubtitle {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#collectACard.projectText {
+    color: white;
+}
+
+#collectACard.projectTitle {
+    font-family: pixel, serif; 
+    margin-bottom: -20px;
+}
+
+#collectACard.projectSubtitle {
+    font-family: pixel, serif;
+}
+
+#rateATune.projectText {
+    color: black;
+}
+
+#rateATune.projectTitle {
+    font-family: 'Noto Sans JP', sans-serif; 
+    margin-bottom: -20px;
+}
+
+#rateATune.projectSubtitle {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#javascript.languageLabel {
+    background-color: #f7df1e;
+}
+
+#html.languageLabel {
+    background-color: #f16524;
+}
+
+#css.languageLabel {
+    background-color: #2965f1;
+}
+
+#firebase.languageLabel {
+    background-color: #ffcb2b;
+}
+
+#nodeJS.languageLabel {
+    background-color: #79b361;
+}
+
+#android.languageLabel {
+    background-color: #a7c83f;
+}
+
+#kotlin.languageLabel {
+    background-color: #6c7ae2;
+}
+
+#jetpack.languageLabel {
+    background-color: #103648;
+}
+
+#solidity.languageLabel {
+    background-color: #666666;
+}
+
+#typescript.languageLabel {
+    background-color: #2d79c7;
+}
+
+#angular.languageLabel {
+    background-color: #de002d;
+}
+
+#express.languageLabel {
+    background-color: #f1c617;
+}
+
+#docker.languageLabel {
+    background-color: #1d63ed;
+}
+
+#mongoDB.languageLabel {
+    background-color: #0d2b36;
+}
+
+#contact {
+    width: 100%; 
+    background-color: var(--gray); 
+    color: black; 
+    box-sizing: border-box; 
+    margin-top: 50px; 
+    padding: 10px;
+}
+
+#content {
+    text-align: center;
+}

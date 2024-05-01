@@ -2,11 +2,23 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css ***!
   \***********************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap);
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (1) ***!
+  \***************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Great+Vibes&display=swap);
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (2) ***!
+  \***************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (3) ***!
+  \***************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&display=swap);
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/button/button.css ***!
   \********************************************************************************/
 /* Desktop / laptops / tablets */
-@media (min-width: 700px) {   
+@media (min-width: 800px) {   
     button {
         font-family: "Fira Code", monospace;
         font-size: 20px;
@@ -16,7 +28,7 @@
 }
 
 /* Phones */
-@media (max-width: 700px) {    
+@media (max-width: 800px) {    
     button {
         font-family: "Fira Code", monospace;
         font-size: 15px;
@@ -37,16 +49,42 @@
     border: 3px solid var(--gray-alt);
 }
 
+.btn-alternative {
+    color: black;
+    background-color: var(--white);
+    border: 3px solid black;
+    transition-duration: 0.3s;
+}
+
+.btn-alternative:hover:enabled {
+    background-color: var(--white-alt);
+    border: 3px solid black;
+}
+
 button:disabled {
     background-color: #efefef;
     color: black;
 }
 /*!***************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (1) ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css (4) ***!
   \***************************************************************************/
+/* Default font */
+/* Steph's 60th font */
+/* Replicate font */
+/* Lovecastle font */
+/* Collect a' card font */
+@font-face {
+    font-family: pixel;
+    src: url(../../81f6c7f882fcc2dee106.ttf);
+}
+
 :root {
     --gray: #dbdbdb;
     --gray-alt: #c4c4c4;
+    --gray-see-through: #d9d9d9d5;
+    --gray-see-through-alt: #c4c4c4d5;
+    --white: #f0f0f0;
+    --white-alt: #dfdfdf;
 }
 
 body {
@@ -66,7 +104,7 @@ hr {
 }
 
 /* Desktop / laptops / tablets */
-@media (min-width: 700px) {    
+@media (min-width: 800px) {    
     h1 {
         font-weight: 700;
         font-size: 70px;
@@ -100,7 +138,7 @@ hr {
 }
 
 /* Phones */
-@media (max-width: 700px) {    
+@media (max-width: 800px) {    
     h1 {
         font-weight: 700;
         font-size: 50px;
@@ -164,15 +202,15 @@ a {
 }
 
 a {
-    color: var(--gray);
-    text-decoration-color: var(--gray);
+    color: var(--gray-alt);
+    text-decoration-color: var(--gray-alt);
 }
 
 a:hover {
     text-decoration: underline;
     text-decoration-style: solid;
-    color: var(--gray-alt);
-    text-decoration-color: var(--gray-alt);
+    color: black;
+    text-decoration-color: black;
 }
 
 .left-divide {

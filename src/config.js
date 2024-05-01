@@ -33,7 +33,7 @@ export default function configuration() {
     const auth = getAuth();
     // Firebase storage service
     const storage = getStorage();
-    // Firebase firedtore service
+    // Firebase firestore service
     const firestore = getFirestore();
 
     const favicon = ref(storage, 'images/common/favicon.ico');

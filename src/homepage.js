@@ -35,10 +35,14 @@ async function getProjectHighlights() {
         // Project text title
         const projectTitle = document.createElement("h2");
         projectTitle.innerText = doc.data().title;
+        projectTitle.id = doc.id;
+        projectTitle.className = "projectTitle";
         projectTextDiv.appendChild(projectTitle);
         // Project text subtitle
         const projectSubtitle = document.createElement("p");
         projectSubtitle.innerText = doc.data().subtitle;
+        projectSubtitle.id = doc.id;
+        projectSubtitle.className = "projectSubtitle";
         projectTextDiv.appendChild(projectSubtitle);
         // Project button
         const projectButtonDiv = document.createElement("div");
@@ -56,6 +60,69 @@ async function getProjectHighlights() {
         } else {
             projectBannerDiv.appendChild(projectButtonDiv);
             projectBannerDiv.appendChild(projectTextDiv);
+        }
+        // Project info
+        const parentProjectInfoDiv = document.getElementById("projectInfo");
+        const projectInfoDiv = document.createElement("div");
+        projectInfoDiv.id = doc.id;
+        projectInfoDiv.className = "projectInfo";
+        parentProjectInfoDiv.appendChild(projectInfoDiv);
+        // Close project info
+        const closeAboutPage = document.createElement("img");
+        closeAboutPage.id = doc.id;
+        closeAboutPage.className = "closeAboutPage";
+        projectInfoDiv.appendChild(closeAboutPage);
+        // Project info title
+        const projectInfoTitle = document.createElement("h2");
+        projectInfoTitle.innerText = doc.data().title;
+        projectInfoDiv.appendChild(projectInfoTitle);
+        // Project info links
+        const projectLinksDiv = document.createElement("div");
+        projectLinksDiv.className = "projectLinks";
+        projectInfoDiv.appendChild(projectLinksDiv);
+        // Iterate each map element
+        if (doc.data().links != null) {
+            const links = new Map(Object.entries(doc.data().links));
+            links.forEach((buttonText, link) => {
+                console.log(buttonText);
+                const projectLink = document.createElement("a");
+                projectLink.href = link;
+                projectLink.target = "_blank";
+                projectLinksDiv.appendChild(projectLink);
+                // Append the button inside the link
+                const projectLinkButton = document.createElement("button");
+                projectLinkButton.className = "btn-alternative";
+                projectLinkButton.innerText = buttonText;
+                projectLink.appendChild(projectLinkButton);
+            });
+        }
+        // Project details
+        const projectDetailsDiv = document.createElement("div");
+        projectDetailsDiv.className = "projectInfoDetails";
+        projectInfoDiv.appendChild(projectDetailsDiv);
+        // Details
+        const details = document.createElement("p");
+        details.innerText = doc.data().details;
+        projectDetailsDiv.appendChild(details);
+        // Labels
+        const labelDiv = document.createElement("div");
+        labelDiv.id = "languages"; 
+        labelDiv.setAttribute('style', 'text-align: center;');
+        projectDetailsDiv.appendChild(labelDiv);
+        // Add each label
+        if (doc.data().labels != null) {
+            const labels = new Map(Object.entries(doc.data().labels));
+            labels.forEach((labelName, labelID) => {
+                const label = document.createElement("div");
+                label.id = labelID;
+                label.className = "languageLabel";
+                labelDiv.appendChild(label);
+                // Label name
+                const name = document.createElement("p");
+                name.setAttribute('style', 'padding: 0px 20px; font-size: large; font-weight: bold;');
+                name.innerText = labelName;
+                label.appendChild(name);
+            });
         }
     });
 }

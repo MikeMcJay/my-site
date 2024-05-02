@@ -58,26 +58,129 @@ function typeUsername(index, nameToTypeOut) {
 typeUsername(0, "MikeMcJay");
 
 /* Insert images */
-const collectACardDiv = document.getElementById("collectACard");
+const infoRef = ref(storage, "icons/common/info.svg");
+Array.from(document.getElementsByClassName("moreInfo")).forEach(
+    function(element, index, array) {
+        getDownloadURL(infoRef).then((url) => {
+            element.src = url;
+        });
+    }
+)
+
+const closeRef = ref(storage, "icons/common/close.svg");
+Array.from(document.getElementsByClassName("closeAboutPage")).forEach(
+    function(element, index, array) {
+        getDownloadURL(closeRef).then((url) => {
+            element.src = url;
+        });
+    }
+)
+
 const collectACardRef = ref(storage, "images/common/collect-a-card.gif");
-getDownloadURL(collectACardRef).then((url) => {
-    collectACardDiv.style.backgroundImage = `url(${url})`;
-});
+Array.from(document.getElementsByClassName("projectBanner")).forEach(
+    function(projectBanner, index, array) {
+        if (projectBanner.id == "collectACard") {
+            getDownloadURL(collectACardRef).then((url) => {
+                projectBanner.style.backgroundImage = `url(${url})`;
+            });
+        }
+    }
+)
 
 const linkedIn = document.getElementById("linkedIn");
-const linkedInRef = ref(storage, "images/icons/linkedIn.png");
+const linkedInRef = ref(storage, "icons/common/linkedIn.png");
 getDownloadURL(linkedInRef).then((url) => {
     linkedIn.src = url;
 });
 
 const gitlab = document.getElementById("gitlab");
-const gitlabRef = ref(storage, "images/icons/gitlab.png");
+const gitlabRef = ref(storage, "icons/common/gitlab.png");
 getDownloadURL(gitlabRef).then((url) => {
     gitlab.src = url;
 });
 
 const github = document.getElementById("github");
-const githubRef = ref(storage, "images/icons/github.svg");
+const githubRef = ref(storage, "icons/common/github.svg");
 getDownloadURL(githubRef).then((url) => {
     github.src = url;
 });
+
+/* Remove project about icons */ 
+function hideInfoButtons() {
+    Array.from(document.getElementsByClassName("moreInfo")).forEach(
+        function(element, index, array) {
+            element.style.display = "none";
+        }
+    )
+}
+function showInfoButtons() {
+    Array.from(document.getElementsByClassName("moreInfo")).forEach(
+        function(element, index, array) {
+            element.setAttribute('style', 'display:inline !important');
+        }
+    )
+}
+function addShowInfoHandler(projectBannerElement) {
+    Array.from(document.getElementsByClassName("projectInfo")).forEach(
+        function(projectInfoElement, index, array) {
+            if (projectBannerElement.id == projectInfoElement.id) {
+                showProjectInfo(projectInfoElement);
+            }
+        }
+    );
+}
+if (document.documentElement.clientWidth < 800) {
+    hideInfoButtons();
+} else {
+    window.addEventListener('resize', function(event) {
+        /* Remove button */
+        if (this.document.documentElement.clientWidth < 800) {
+            hideInfoButtons();
+        } else {
+            showInfoButtons();
+        }
+    }, true);
+}
+
+/* Document listeners */
+// Closes the project info div
+Array.from(document.getElementsByClassName("closeAboutPage")).forEach(
+    function(closeButtonElement, index, array) {
+        closeButtonElement.addEventListener("click", function() {
+            Array.from(document.getElementsByClassName("projectInfo show")).forEach(
+                function(projectInfoElement, index, array) {
+                    if (projectInfoElement.id == closeButtonElement.id) {
+                        projectInfoElement.className = projectInfoElement.className.replace("projectInfo show", "projectInfo");
+                        const content = document.getElementById("outerContent");
+                        content.className = content.className.replace("blur", "");
+                        const body = document.body;
+                        body.className = body.className.replace("blur", "");
+                    }
+                }
+            )
+        });
+    }
+)
+
+function showProjectInfo(projectInfoElement) {
+    projectInfoElement.className = projectInfoElement.className.replace("projectInfo", "projectInfo show");
+    const content = document.getElementById("outerContent");
+    content.className = content.className.replace("", "blur");
+    const body = document.body;
+    body.className = body.className.replace("", "blur");
+}
+
+// Opens the project info div
+Array.from(document.getElementsByClassName("projectBanner")).forEach(
+    function(projectBanner, index, array) {
+        projectBanner.addEventListener("click", function() {
+            Array.from(document.getElementsByClassName("projectInfo")).forEach(
+                function(projectInfoElement, index, array) {
+                    if (projectInfoElement.id == projectBanner.id) {
+                        showProjectInfo(projectInfoElement);
+                    }
+                }
+            )
+        });
+    }
+)

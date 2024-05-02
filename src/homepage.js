@@ -1,11 +1,12 @@
 import './styles/pages/homepage.css';
 import './styles/navigation/homepage-navbar.css';
 
-import configuration from './config.js';
+import configuration, { db } from './config.js';
 import { getAuth, onAuthStateChanged, sendSignInLinkToEmail } from "firebase/auth";
 import showPopup from './scripts/popup.js';
 import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 import anime from 'animejs';
+import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
 
 const storage = getStorage();
 const auth = getAuth();
@@ -14,6 +15,139 @@ configuration();
 
 onAuthStateChanged(auth, (currentUser) => {
 
+});
+
+/* Load project highlights */
+async function getProjectHighlights() {
+    const q = query(collection(db, "projects"), where("isHighlight", "==", true), orderBy("started", "desc"));
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+        // Project banner
+        const projectHighlightsDiv = document.getElementById("projectHighlights");
+        const projectBannerDiv = document.createElement("div");
+        projectBannerDiv.id = doc.id;
+        projectBannerDiv.className = "projectBanner";
+        projectHighlightsDiv.appendChild(projectBannerDiv);
+        // Project text
+        const projectTextDiv = document.createElement("div");
+        projectTextDiv.id = doc.id;
+        projectTextDiv.className = "projectText";
+        // Project text title
+        const projectTitle = document.createElement("h2");
+        projectTitle.innerText = doc.data().title;
+        projectTextDiv.appendChild(projectTitle);
+        // Project text subtitle
+        const projectSubtitle = document.createElement("p");
+        projectSubtitle.innerText = doc.data().subtitle;
+        projectTextDiv.appendChild(projectSubtitle);
+        // Project button
+        const projectButtonDiv = document.createElement("div");
+        projectButtonDiv.id = doc.id;
+        projectButtonDiv.className = "projectButton";
+        // Project button image
+        const moreInfo = document.createElement("img");
+        moreInfo.id = doc.id;
+        moreInfo.className = "moreInfo";
+        projectButtonDiv.appendChild(moreInfo);
+        // Depending on whether the text is on the left or right, it has to be appended differently
+        if (doc.data().alignLeft) {
+            projectBannerDiv.appendChild(projectTextDiv);
+            projectBannerDiv.appendChild(projectButtonDiv);
+        } else {
+            projectBannerDiv.appendChild(projectButtonDiv);
+            projectBannerDiv.appendChild(projectTextDiv);
+        }
+    });
+}
+getProjectHighlights().then(() => {
+    // Only add the images after loading the content
+    const infoRef = ref(storage, "icons/common/info.svg");
+    Array.from(document.getElementsByClassName("moreInfo")).forEach(
+        function(element, index, array) {
+            getDownloadURL(infoRef).then((url) => {
+                element.src = url;
+            });
+        }
+    )
+
+    const closeRef = ref(storage, "icons/common/close.svg");
+    Array.from(document.getElementsByClassName("closeAboutPage")).forEach(
+        function(element, index, array) {
+            getDownloadURL(closeRef).then((url) => {
+                element.src = url;
+            });
+        }
+    )
+
+    // Closes the project info div
+    Array.from(document.getElementsByClassName("closeAboutPage")).forEach(
+        function(closeButtonElement, index, array) {
+            closeButtonElement.addEventListener("click", function() {
+                Array.from(document.getElementsByClassName("projectInfo show")).forEach(
+                    function(projectInfoElement, index, array) {
+                        if (projectInfoElement.id == closeButtonElement.id) {
+                            projectInfoElement.className = projectInfoElement.className.replace("projectInfo show", "projectInfo");
+                            const content = document.getElementById("outerContent");
+                            content.className = content.className.replace("blur", "");
+                            const body = document.body;
+                            body.className = body.className.replace("blur", "");
+                        }
+                    }
+                )
+            });
+        }
+    )
+
+    function showProjectInfo(projectInfoElement) {
+        projectInfoElement.className = projectInfoElement.className.replace("projectInfo", "projectInfo show");
+        const content = document.getElementById("outerContent");
+        content.className = content.className.replace("", "blur");
+        const body = document.body;
+        body.className = body.className.replace("", "blur");
+    }
+
+    // Opens the project info div
+    Array.from(document.getElementsByClassName("projectBanner")).forEach(
+        function(projectBanner, index, array) {
+            projectBanner.addEventListener("click", function() {
+                Array.from(document.getElementsByClassName("projectInfo")).forEach(
+                    function(projectInfoElement, index, array) {
+                        if (projectInfoElement.id == projectBanner.id) {
+                            showProjectInfo(projectInfoElement);
+                        }
+                    }
+                )
+            });
+        }
+    )
+
+    // Remove project about icons
+    function hideInfoButtons() {
+        Array.from(document.getElementsByClassName("moreInfo")).forEach(
+            function(element, index, array) {
+                element.style.display = "none";
+            }
+        )
+    }
+    function showInfoButtons() {
+        Array.from(document.getElementsByClassName("moreInfo")).forEach(
+            function(element, index, array) {
+                element.setAttribute('style', 'display:inline !important');
+            }
+        )
+    }
+
+    if (document.documentElement.clientWidth < 800) {
+        hideInfoButtons();
+    } else {
+        window.addEventListener('resize', function(event) {
+            if (this.document.documentElement.clientWidth < 800) {
+                hideInfoButtons();
+            } else {
+                showInfoButtons();
+            }
+        }, true);
+    }
 });
 
 /* Type out username functionality */
@@ -58,24 +192,6 @@ function typeUsername(index, nameToTypeOut) {
 typeUsername(0, "MikeMcJay");
 
 /* Insert images */
-const infoRef = ref(storage, "icons/common/info.svg");
-Array.from(document.getElementsByClassName("moreInfo")).forEach(
-    function(element, index, array) {
-        getDownloadURL(infoRef).then((url) => {
-            element.src = url;
-        });
-    }
-)
-
-const closeRef = ref(storage, "icons/common/close.svg");
-Array.from(document.getElementsByClassName("closeAboutPage")).forEach(
-    function(element, index, array) {
-        getDownloadURL(closeRef).then((url) => {
-            element.src = url;
-        });
-    }
-)
-
 const collectACardRef = ref(storage, "images/common/collect-a-card.gif");
 Array.from(document.getElementsByClassName("projectBanner")).forEach(
     function(projectBanner, index, array) {
@@ -104,83 +220,3 @@ const githubRef = ref(storage, "icons/common/github.svg");
 getDownloadURL(githubRef).then((url) => {
     github.src = url;
 });
-
-/* Remove project about icons */ 
-function hideInfoButtons() {
-    Array.from(document.getElementsByClassName("moreInfo")).forEach(
-        function(element, index, array) {
-            element.style.display = "none";
-        }
-    )
-}
-function showInfoButtons() {
-    Array.from(document.getElementsByClassName("moreInfo")).forEach(
-        function(element, index, array) {
-            element.setAttribute('style', 'display:inline !important');
-        }
-    )
-}
-function addShowInfoHandler(projectBannerElement) {
-    Array.from(document.getElementsByClassName("projectInfo")).forEach(
-        function(projectInfoElement, index, array) {
-            if (projectBannerElement.id == projectInfoElement.id) {
-                showProjectInfo(projectInfoElement);
-            }
-        }
-    );
-}
-if (document.documentElement.clientWidth < 800) {
-    hideInfoButtons();
-} else {
-    window.addEventListener('resize', function(event) {
-        /* Remove button */
-        if (this.document.documentElement.clientWidth < 800) {
-            hideInfoButtons();
-        } else {
-            showInfoButtons();
-        }
-    }, true);
-}
-
-/* Document listeners */
-// Closes the project info div
-Array.from(document.getElementsByClassName("closeAboutPage")).forEach(
-    function(closeButtonElement, index, array) {
-        closeButtonElement.addEventListener("click", function() {
-            Array.from(document.getElementsByClassName("projectInfo show")).forEach(
-                function(projectInfoElement, index, array) {
-                    if (projectInfoElement.id == closeButtonElement.id) {
-                        projectInfoElement.className = projectInfoElement.className.replace("projectInfo show", "projectInfo");
-                        const content = document.getElementById("outerContent");
-                        content.className = content.className.replace("blur", "");
-                        const body = document.body;
-                        body.className = body.className.replace("blur", "");
-                    }
-                }
-            )
-        });
-    }
-)
-
-function showProjectInfo(projectInfoElement) {
-    projectInfoElement.className = projectInfoElement.className.replace("projectInfo", "projectInfo show");
-    const content = document.getElementById("outerContent");
-    content.className = content.className.replace("", "blur");
-    const body = document.body;
-    body.className = body.className.replace("", "blur");
-}
-
-// Opens the project info div
-Array.from(document.getElementsByClassName("projectBanner")).forEach(
-    function(projectBanner, index, array) {
-        projectBanner.addEventListener("click", function() {
-            Array.from(document.getElementsByClassName("projectInfo")).forEach(
-                function(projectInfoElement, index, array) {
-                    if (projectInfoElement.id == projectBanner.id) {
-                        showProjectInfo(projectInfoElement);
-                    }
-                }
-            )
-        });
-    }
-)

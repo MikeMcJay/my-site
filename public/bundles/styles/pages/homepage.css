@@ -33,17 +33,17 @@
     /* Project highlights */
     .projectText {
         display:inline-block; 
-        width: 400px; 
+        width: 700px; 
         vertical-align: middle; 
         margin: 10px;
     }
-    .projectButton {
+    /* .projectButton {
         display:inline-block; 
         text-align: center; 
         width: 300px; 
         vertical-align: middle; 
         margin: 10px;
-    }
+    } */
     /* Regular projects */
     .project {
         padding: 10px 20px 40px 20px; 
@@ -380,62 +380,6 @@
 .languageLabel {
     color: white;
 }
-
-/* #javascript.languageLabel {
-    background-color: #f7df1e;
-}
-
-#html.languageLabel {
-    background-color: #f16524;
-}
-
-#css.languageLabel {
-    background-color: #2965f1;
-}
-
-#firebase.languageLabel {
-    background-color: #ffcb2b;
-}
-
-#nodeJS.languageLabel {
-    background-color: #79b361;
-}
-
-#android.languageLabel {
-    background-color: #a7c83f;
-}
-
-#kotlin.languageLabel {
-    background-color: #6c7ae2;
-}
-
-#jetpack.languageLabel {
-    background-color: #103648;
-}
-
-#solidity.languageLabel {
-    background-color: #666666;
-}
-
-#typescript.languageLabel {
-    background-color: #2d79c7;
-}
-
-#angular.languageLabel {
-    background-color: #de002d;
-}
-
-#express.languageLabel {
-    background-color: #f1c617;
-}
-
-#docker.languageLabel {
-    background-color: #1d63ed;
-}
-
-#mongoDB.languageLabel {
-    background-color: #0d2b36;
-} */
 
 /* Footer styling */
 

@@ -14,14 +14,7 @@
     /* Project highlights */
     .projectText {
         display:inline-block; 
-        width: 400px; 
-        vertical-align: middle; 
-        margin: 10px;
-    }
-    .projectButton {
-        display:inline-block; 
-        text-align: center; 
-        width: 300px; 
+        width: 700px; 
         vertical-align: middle; 
         margin: 10px;
     }
@@ -119,13 +112,6 @@
     .projectSubtitle {
         margin-left: 10px;
         margin-right: 10px;
-    }
-    .projectButton {
-        display:inline-block; 
-        text-align: center; 
-        width: 300px; 
-        vertical-align: middle; 
-        margin: 10px;
     }
     /* Regular projects */
     .project {

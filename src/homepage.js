@@ -121,23 +121,7 @@ async function getProjectHighlights() {
         projectSubtitle.id = doc.id;
         projectSubtitle.className = "projectSubtitle";
         projectTextDiv.appendChild(projectSubtitle);
-        // Project button
-        const projectButtonDiv = document.createElement("div");
-        projectButtonDiv.id = doc.id;
-        projectButtonDiv.className = "projectButton";
-        // Project button image
-        const moreInfo = document.createElement("img");
-        moreInfo.id = doc.id;
-        moreInfo.className = "moreInfo";
-        projectButtonDiv.appendChild(moreInfo);
-        // Depending on whether the text is on the left or right, it has to be appended differently
-        if (doc.data().alignLeft) {
-            projectBannerDiv.appendChild(projectTextDiv);
-            projectBannerDiv.appendChild(projectButtonDiv);
-        } else {
-            projectBannerDiv.appendChild(projectButtonDiv);
-            projectBannerDiv.appendChild(projectTextDiv);
-        }
+        projectBannerDiv.appendChild(projectTextDiv);
         // Project info
         createProjectInfo(doc);
     });
@@ -203,34 +187,6 @@ getProjectHighlights().then(() => {
             });
         }
     )
-
-    // Remove project about icons
-    function hideInfoButtons() {
-        Array.from(document.getElementsByClassName("moreInfo")).forEach(
-            function(element, index, array) {
-                element.style.display = "none";
-            }
-        )
-    }
-    function showInfoButtons() {
-        Array.from(document.getElementsByClassName("moreInfo")).forEach(
-            function(element, index, array) {
-                element.setAttribute('style', 'display:inline !important');
-            }
-        )
-    }
-
-    if (document.documentElement.clientWidth < 800) {
-        hideInfoButtons();
-    } else {
-        window.addEventListener('resize', function(event) {
-            if (this.document.documentElement.clientWidth < 800) {
-                hideInfoButtons();
-            } else {
-                showInfoButtons();
-            }
-        }, true);
-    }
 });
 
 /* Load project */

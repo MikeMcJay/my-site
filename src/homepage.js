@@ -427,3 +427,12 @@ linkButtonIDs.forEach((ID => {
         });
     });
 }));
+
+// Text introduction
+anime({
+    targets: ['#subtitle', '#about', '#highlights', '#projectHighlights', '#projText', '#projects', '#contact'],
+    opacity: [0, 1],
+    easing: 'easeInOutQuad',
+    delay: anime.stagger(100, {start: 500}),
+    loop: false
+});

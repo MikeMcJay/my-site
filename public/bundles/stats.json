@@ -1,8 +1,8 @@
 {
-  "hash": "59130792d157879f6099",
+  "hash": "4441c35340a9ab1524e5",
   "version": "5.91.0",
-  "time": 1073,
-  "builtAt": 1714764309754,
+  "time": 1082,
+  "builtAt": 1714764820683,
   "publicPath": "auto",
   "outputPath": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\public\\bundles",
   "assetsByChunkName": {
@@ -19,13 +19,13 @@
     {
       "type": "asset",
       "name": "pages/homepage.bundle.js",
-      "size": 2426973,
+      "size": 2427350,
       "emitted": true,
       "comparedForEmit": false,
       "cached": false,
       "info": {
         "javascriptModule": false,
-        "size": 2426973
+        "size": 2427350
       },
       "chunkNames": [
         "pages/homepage"
@@ -9362,9 +9362,9 @@
       "initial": true,
       "entry": true,
       "recorded": false,
-      "size": 2223022,
+      "size": 2223289,
       "sizes": {
-        "javascript": 2207803,
+        "javascript": 2208070,
         "css/mini-extract": 14061,
         "runtime": 1158
       },
@@ -9382,7 +9382,7 @@
       "auxiliaryFiles": [
         "81f6c7f882fcc2dee106.ttf"
       ],
-      "hash": "eb3402a0e2a68f865e13",
+      "hash": "01045c043d1b3ad5a92a",
       "childrenByOrder": {},
       "id": "pages/homepage",
       "siblings": [],
@@ -16514,6 +16514,34 @@
               "loc": "422:8-13",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "animejs",
+              "loc": "432:0-5",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "animejs",
+              "loc": "436:11-24",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
             }
           ],
           "usedExports": null,
@@ -18487,9 +18515,9 @@
           "type": "module",
           "moduleType": "javascript/auto",
           "layer": null,
-          "size": 17152,
+          "size": 17419,
           "sizes": {
-            "javascript": 17152
+            "javascript": 17419
           },
           "built": true,
           "codeGenerated": true,
@@ -19515,9 +19543,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 17152,
+      "size": 17419,
       "sizes": {
-        "javascript": 17152
+        "javascript": 17419
       },
       "built": true,
       "codeGenerated": true,
@@ -20673,6 +20701,34 @@
           "explanation": "",
           "userRequest": "animejs",
           "loc": "422:8-13",
+          "moduleId": "./src/homepage.js",
+          "resolvedModuleId": "./src/homepage.js"
+        },
+        {
+          "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "module": "./src/homepage.js",
+          "moduleName": "./src/homepage.js",
+          "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "resolvedModule": "./src/homepage.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "animejs",
+          "loc": "432:0-5",
+          "moduleId": "./src/homepage.js",
+          "resolvedModuleId": "./src/homepage.js"
+        },
+        {
+          "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "module": "./src/homepage.js",
+          "moduleName": "./src/homepage.js",
+          "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "resolvedModule": "./src/homepage.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "animejs",
+          "loc": "436:11-24",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         }
@@ -31077,11 +31133,11 @@
         },
         {
           "name": "pages/homepage.bundle.js",
-          "size": 2426973
+          "size": 2427350
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 2442980,
+      "assetsSize": 2443357,
       "auxiliaryAssets": [
         {
           "name": "81f6c7f882fcc2dee106.ttf",
@@ -31137,11 +31193,11 @@
         },
         {
           "name": "pages/homepage.bundle.js",
-          "size": 2426973
+          "size": 2427350
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 2442980,
+      "assetsSize": 2443357,
       "auxiliaryAssets": [
         {
           "name": "81f6c7f882fcc2dee106.ttf",

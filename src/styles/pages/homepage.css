@@ -261,6 +261,7 @@
     display:inline-block; 
     vertical-align: top; 
     background-color: var(--gray); 
+    border-radius: 30px;
 }
 
 /* Project highlight styling */
@@ -363,16 +364,22 @@
     text-align: center;
 }
 
+#outerContent {
+    /* The outer color is set to white so that it 
+    can be darkened when the blur class is applied */
+    background-color: white;
+}
+
 /* Blurring */
 
 #outerContent.blur {
     height: 100%;
     filter: blur(8px);
     -webkit-filter: blur(8px);
+    filter: brightness(50%);
     pointer-events: none;
 }
 
 body.blur {
-    background-color: var(--tan-alt);
     overflow: hidden;
 }

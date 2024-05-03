@@ -37,13 +37,6 @@
         vertical-align: middle; 
         margin: 10px;
     }
-    /* .projectButton {
-        display:inline-block; 
-        text-align: center; 
-        width: 300px; 
-        vertical-align: middle; 
-        margin: 10px;
-    } */
     /* Regular projects */
     .project {
         padding: 10px 20px 40px 20px; 
@@ -138,13 +131,6 @@
     .projectSubtitle {
         margin-left: 10px;
         margin-right: 10px;
-    }
-    .projectButton {
-        display:inline-block; 
-        text-align: center; 
-        width: 300px; 
-        vertical-align: middle; 
-        margin: 10px;
     }
     /* Regular projects */
     .project {
@@ -294,6 +280,7 @@
     display:inline-block; 
     vertical-align: top; 
     background-color: var(--gray); 
+    border-radius: 30px;
 }
 
 /* Project highlight styling */
@@ -396,17 +383,23 @@
     text-align: center;
 }
 
+#outerContent {
+    /* The outer color is set to white so that it 
+    can be darkened when the blur class is applied */
+    background-color: white;
+}
+
 /* Blurring */
 
 #outerContent.blur {
     height: 100%;
     filter: blur(8px);
     -webkit-filter: blur(8px);
+    filter: brightness(50%);
     pointer-events: none;
 }
 
 body.blur {
-    background-color: var(--tan-alt);
     overflow: hidden;
 }
 /*!*********************************************************************************************!*\

@@ -1,8 +1,8 @@
 {
-  "hash": "49b635f7113508ec24b7",
+  "hash": "c8fdcba64a509ead74e5",
   "version": "5.91.0",
-  "time": 1103,
-  "builtAt": 1714759061576,
+  "time": 1213,
+  "builtAt": 1714760011505,
   "publicPath": "auto",
   "outputPath": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\public\\bundles",
   "assetsByChunkName": {
@@ -20,7 +20,7 @@
       "type": "asset",
       "name": "pages/homepage.bundle.js",
       "size": 2423273,
-      "emitted": false,
+      "emitted": true,
       "comparedForEmit": true,
       "cached": false,
       "info": {
@@ -68,7 +68,7 @@
       "type": "asset",
       "name": "./styles/pages/homepage.css",
       "size": 15926,
-      "emitted": true,
+      "emitted": false,
       "comparedForEmit": true,
       "cached": false,
       "info": {
@@ -9382,7 +9382,7 @@
       "auxiliaryFiles": [
         "81f6c7f882fcc2dee106.ttf"
       ],
-      "hash": "a6f8ea6a6f86985f76f2",
+      "hash": "5bcb92a340bf9f394102",
       "childrenByOrder": {},
       "id": "pages/homepage",
       "siblings": [],
@@ -29429,8 +29429,8 @@
       "cacheable": true,
       "optional": false,
       "orphan": true,
-      "issuer": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
-      "issuerName": "./src/styles/navigation/homepage-navbar.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/navigation/homepage-navbar.css",
+      "issuer": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
+      "issuerName": "./src/styles/pages/homepage.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/pages/homepage.css",
       "issuerPath": [
         {
           "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
@@ -29438,13 +29438,13 @@
           "id": "./src/homepage.js"
         },
         {
-          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
-          "name": "./src/styles/navigation/homepage-navbar.css",
-          "id": "./src/styles/navigation/homepage-navbar.css"
+          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
+          "name": "./src/styles/pages/homepage.css",
+          "id": "./src/styles/pages/homepage.css"
         },
         {
-          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
-          "name": "./src/styles/navigation/homepage-navbar.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/navigation/homepage-navbar.css",
+          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
+          "name": "./src/styles/pages/homepage.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/pages/homepage.css",
           "id": null
         }
       ],
@@ -29711,8 +29711,8 @@
       "cacheable": true,
       "optional": false,
       "orphan": true,
-      "issuer": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
-      "issuerName": "./src/styles/navigation/homepage-navbar.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/navigation/homepage-navbar.css",
+      "issuer": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
+      "issuerName": "./src/styles/pages/homepage.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/pages/homepage.css",
       "issuerPath": [
         {
           "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
@@ -29720,13 +29720,13 @@
           "id": "./src/homepage.js"
         },
         {
-          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
-          "name": "./src/styles/navigation/homepage-navbar.css",
-          "id": "./src/styles/navigation/homepage-navbar.css"
+          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
+          "name": "./src/styles/pages/homepage.css",
+          "id": "./src/styles/pages/homepage.css"
         },
         {
-          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
-          "name": "./src/styles/navigation/homepage-navbar.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/navigation/homepage-navbar.css",
+          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
+          "name": "./src/styles/pages/homepage.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/pages/homepage.css",
           "id": null
         }
       ],

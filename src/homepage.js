@@ -276,7 +276,7 @@ function typeUsername(index, nameToTypeOut) {
             for (let i = index; i < text.length; i++) {
                 setTimeout(function() {
                     mikemcjayDiv.innerText += text.charAt(i)
-                }, i * anime.random(300, 330));
+                }, i * anime.random(150, 170));
             }
             setInterval(function() {
                 if (mikemcjayDiv.innerText.length == text.length) {

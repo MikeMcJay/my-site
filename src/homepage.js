@@ -153,6 +153,12 @@ getProjectHighlights().then(() => {
                 Array.from(document.getElementsByClassName("projectInfo show")).forEach(
                     function(projectInfoElement, index, array) {
                         if (projectInfoElement.id == closeButtonElement.id) {
+                            anime({
+                                targets: projectInfoElement,
+                                scale: [1, 0],
+                                easing: 'easeInOutQuad',
+                                duration: 500
+                            });
                             projectInfoElement.className = projectInfoElement.className.replace("projectInfo show", "projectInfo");
                             const content = document.getElementById("outerContent");
                             content.className = content.className.replace("blur", "");
@@ -171,6 +177,12 @@ getProjectHighlights().then(() => {
         content.className = content.className.replace("", "blur");
         const body = document.body;
         body.className = body.className.replace("", "blur");
+        anime({
+            targets: projectInfoElement,
+            scale: [0, 1],
+            easing: 'easeInOutQuad',
+            duration: 500
+        });
     }
 
     // Opens the project info div
@@ -187,6 +199,28 @@ getProjectHighlights().then(() => {
             });
         }
     )
+
+    // Animations for project highlight banners
+    Array.from(document.getElementsByClassName("projectBanner")).forEach(
+        function(project, index, array) {
+            project.addEventListener("mouseover", function() {
+                anime({
+                    targets: project,
+                    scale: 1.1,
+                    easing: 'easeInOutQuad',
+                    duration: 500
+                });
+            });
+            project.addEventListener("mouseout", function() {
+                anime({
+                    targets: project,
+                    scale: 1.0,
+                    easing: 'easeInOutQuad',
+                    duration: 500
+                });
+            });
+        }
+    );
 });
 
 /* Load project */
@@ -231,6 +265,12 @@ getProjects().then(() => {
                 Array.from(document.getElementsByClassName("projectInfo show")).forEach(
                     function(projectInfoElement, index, array) {
                         if (projectInfoElement.id == closeButtonElement.id) {
+                            anime({
+                                targets: projectInfoElement,
+                                scale: [1, 0],
+                                easing: 'easeInOutQuad',
+                                duration: 500
+                            });
                             projectInfoElement.className = projectInfoElement.className.replace("projectInfo show", "projectInfo");
                             const content = document.getElementById("outerContent");
                             content.className = content.className.replace("blur", "");
@@ -249,6 +289,12 @@ getProjects().then(() => {
         content.className = content.className.replace("", "blur");
         const body = document.body;
         body.className = body.className.replace("", "blur");
+        anime({
+            targets: projectInfoElement,
+            scale: [0, 1],
+            easing: 'easeInOutQuad',
+            duration: 500
+        });
     }
 
     // Opens the project info div
@@ -265,6 +311,28 @@ getProjects().then(() => {
             });
         }
     )
+    
+    // Animations for project banners
+    Array.from(document.getElementsByClassName("project")).forEach(
+        function(project, index, array) {
+            project.addEventListener("mouseover", function() {
+                anime({
+                    targets: project,
+                    backgroundColor: "#c4c4c4",
+                    easing: 'easeInOutQuad',
+                    duration: 500
+                });
+            });
+            project.addEventListener("mouseout", function() {
+                anime({
+                    targets: project,
+                    backgroundColor: "#dbdbdb",
+                    easing: 'easeInOutQuad',
+                    duration: 500
+                });
+            });
+        }
+    );
 });
 
 /* Type out username functionality */
@@ -337,3 +405,25 @@ const githubRef = ref(storage, "icons/common/github.svg");
 getDownloadURL(githubRef).then((url) => {
     github.src = url;
 });
+
+/* Animations */
+// Links
+const linkButtonIDs = ["linkedIn", "gitlab", "github"];
+linkButtonIDs.forEach((ID => {
+    document.getElementById(ID).addEventListener("mouseover", function() {
+        anime({
+            targets: `#${ID}`,
+            scale: 1.1,
+            easing: 'easeInOutQuad',
+            duration: 500
+        });
+    });
+    document.getElementById(ID).addEventListener("mouseout", function() {
+        anime({
+            targets: `#${ID}`,
+            scale: 1.0,
+            easing: 'easeInOutQuad',
+            duration: 500
+        });
+    });
+}));

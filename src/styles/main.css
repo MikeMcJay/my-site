@@ -39,6 +39,10 @@ hr {
     width: 70%;
 }
 
+.hideScroll {
+    overflow: hidden;
+}
+
 /* Desktop / laptops / tablets */
 @media (min-width: 800px) {    
     h1 {

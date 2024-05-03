@@ -228,6 +228,7 @@
 .projectBanner {
     width: 100%; 
     box-sizing: border-box; 
+    cursor: pointer;
 }
 
 #stephs60th.projectBanner {
@@ -262,6 +263,7 @@
     vertical-align: top; 
     background-color: var(--gray); 
     border-radius: 30px;
+    cursor: pointer;
 }
 
 /* Project highlight styling */

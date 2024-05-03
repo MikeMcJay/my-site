@@ -30,6 +30,7 @@
         margin-left: 30px;
         margin-right: 30px;
     }
+    /* Project highlights */
     .projectText {
         display:inline-block; 
         width: 400px; 
@@ -43,6 +44,14 @@
         vertical-align: middle; 
         margin: 10px;
     }
+    /* Regular projects */
+    .project {
+        padding: 10px 20px 40px 20px; 
+        margin: 5px; 
+        width: 300px; 
+        height: 600px;
+    }
+    /* Project info */
     .moreInfo {
         width: 100px;
     }
@@ -59,7 +68,7 @@
         border-radius: 50px; 
         display:inline-block; 
         vertical-align: top; 
-        margin-top: 30px; 
+        margin: 5px; 
         height: auto;
     }
     #collectACard.projectBanner {
@@ -118,6 +127,7 @@
         margin-left: 10px;
         margin-right: 10px;
     }
+    /* Project highlights */
     .projectText {
         padding: 20px;
         margin-top: -40px;
@@ -136,6 +146,14 @@
         vertical-align: middle; 
         margin: 10px;
     }
+    /* Regular projects */
+    .project {
+        padding: 10px 10px 40px 10px; 
+        margin: 5px; 
+        width: 150px; 
+        height: 300px;
+    }
+    /* Project info */
     .moreInfo {
         width: 25px;
     }
@@ -152,7 +170,7 @@
         border-radius: 50px; 
         display:inline-block; 
         vertical-align: top; 
-        margin-top: 10px; 
+        margin: 5px; 
         height: auto;
     }
     #collectACard.projectBanner {
@@ -268,6 +286,14 @@
 #rateATune.projectBanner {
     background-color: #25d865; 
     color: white;
+}
+
+/* Project banners */
+
+.project {
+    display:inline-block; 
+    vertical-align: top; 
+    background-color: var(--gray); 
 }
 
 /* Project highlight styling */

@@ -1,8 +1,8 @@
 {
-  "hash": "77dd0a5b0cad704beb93",
+  "hash": "2e72cc5a2aeffdf8c790",
   "version": "5.91.0",
-  "time": 1074,
-  "builtAt": 1714680260885,
+  "time": 1072,
+  "builtAt": 1714751101606,
   "publicPath": "auto",
   "outputPath": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\public\\bundles",
   "assetsByChunkName": {
@@ -19,13 +19,13 @@
     {
       "type": "asset",
       "name": "pages/homepage.bundle.js",
-      "size": 2420317,
-      "emitted": true,
-      "comparedForEmit": false,
+      "size": 2424129,
+      "emitted": false,
+      "comparedForEmit": true,
       "cached": false,
       "info": {
         "javascriptModule": false,
-        "size": 2420317
+        "size": 2424129
       },
       "chunkNames": [
         "pages/homepage"
@@ -67,12 +67,12 @@
     {
       "type": "asset",
       "name": "./styles/pages/homepage.css",
-      "size": 16381,
-      "emitted": false,
+      "size": 16911,
+      "emitted": true,
       "comparedForEmit": true,
       "cached": false,
       "info": {
-        "size": 16381
+        "size": 16911
       },
       "chunkNames": [
         "pages/homepage"
@@ -7647,7 +7647,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "131:20-23",
+              "loc": "135:20-23",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7661,7 +7661,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "134:12-26",
+              "loc": "138:12-26",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7675,7 +7675,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "140:21-24",
+              "loc": "144:21-24",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7689,7 +7689,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "143:12-26",
+              "loc": "147:12-26",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7703,7 +7703,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "262:24-27",
+              "loc": "250:21-24",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7717,7 +7717,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "266:12-26",
+              "loc": "253:12-26",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7731,7 +7731,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "274:20-23",
+              "loc": "344:24-27",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7745,7 +7745,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "275:0-14",
+              "loc": "348:12-26",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7759,7 +7759,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "280:18-21",
+              "loc": "356:20-23",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7773,7 +7773,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "281:0-14",
+              "loc": "357:0-14",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7787,7 +7787,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "286:18-21",
+              "loc": "362:18-21",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -7801,7 +7801,35 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "287:0-14",
+              "loc": "363:0-14",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "firebase/storage",
+              "loc": "368:18-21",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "firebase/storage",
+              "loc": "369:0-14",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             }
@@ -8529,7 +8557,21 @@
               "active": true,
               "explanation": "",
               "userRequest": "./config.js",
-              "loc": "22:31-33",
+              "loc": "87:31-33",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "./config.js",
+              "loc": "226:31-33",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -9306,10 +9348,10 @@
       "initial": true,
       "entry": true,
       "recorded": false,
-      "size": 2218119,
+      "size": 2221829,
       "sizes": {
-        "javascript": 2202526,
-        "css/mini-extract": 14435,
+        "javascript": 2205706,
+        "css/mini-extract": 14965,
         "runtime": 1158
       },
       "names": [
@@ -9326,7 +9368,7 @@
       "auxiliaryFiles": [
         "81f6c7f882fcc2dee106.ttf"
       ],
-      "hash": "c31ee9148733d9eb2b27",
+      "hash": "f721e60fc7f87eb9b256",
       "childrenByOrder": {},
       "id": "pages/homepage",
       "siblings": [],
@@ -16315,7 +16357,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "animejs",
-              "loc": "229:23-35",
+              "loc": "311:23-35",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             }
@@ -16801,7 +16843,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/firestore",
-              "loc": "22:14-19",
+              "loc": "87:14-19",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -16815,7 +16857,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/firestore",
-              "loc": "22:20-30",
+              "loc": "87:20-30",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -16829,7 +16871,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/firestore",
-              "loc": "22:48-53",
+              "loc": "87:48-53",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -16843,7 +16885,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/firestore",
-              "loc": "22:82-89",
+              "loc": "87:82-89",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -16857,7 +16899,77 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/firestore",
-              "loc": "23:32-39",
+              "loc": "88:32-39",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "firebase/firestore",
+              "loc": "226:14-19",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "firebase/firestore",
+              "loc": "226:20-30",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "firebase/firestore",
+              "loc": "226:48-53",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "firebase/firestore",
+              "loc": "226:83-90",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "firebase/firestore",
+              "loc": "227:32-39",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             }
@@ -17131,7 +17243,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "131:20-23",
+              "loc": "135:20-23",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17145,7 +17257,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "134:12-26",
+              "loc": "138:12-26",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17159,7 +17271,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "140:21-24",
+              "loc": "144:21-24",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17173,7 +17285,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "143:12-26",
+              "loc": "147:12-26",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17187,7 +17299,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "262:24-27",
+              "loc": "250:21-24",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17201,7 +17313,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "266:12-26",
+              "loc": "253:12-26",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17215,7 +17327,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "274:20-23",
+              "loc": "344:24-27",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17229,7 +17341,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "275:0-14",
+              "loc": "348:12-26",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17243,7 +17355,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "280:18-21",
+              "loc": "356:20-23",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17257,7 +17369,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "281:0-14",
+              "loc": "357:0-14",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17271,7 +17383,7 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "286:18-21",
+              "loc": "362:18-21",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -17285,7 +17397,35 @@
               "active": true,
               "explanation": "",
               "userRequest": "firebase/storage",
-              "loc": "287:0-14",
+              "loc": "363:0-14",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "firebase/storage",
+              "loc": "368:18-21",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "firebase/storage",
+              "loc": "369:0-14",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             }
@@ -18013,7 +18153,21 @@
               "active": true,
               "explanation": "",
               "userRequest": "./config.js",
-              "loc": "22:31-33",
+              "loc": "87:31-33",
+              "moduleId": "./src/homepage.js",
+              "resolvedModuleId": "./src/homepage.js"
+            },
+            {
+              "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "module": "./src/homepage.js",
+              "moduleName": "./src/homepage.js",
+              "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+              "resolvedModule": "./src/homepage.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "./config.js",
+              "loc": "226:31-33",
               "moduleId": "./src/homepage.js",
               "resolvedModuleId": "./src/homepage.js"
             },
@@ -18137,9 +18291,9 @@
           "type": "module",
           "moduleType": "javascript/auto",
           "layer": null,
-          "size": 11875,
+          "size": 15055,
           "sizes": {
-            "javascript": 11875
+            "javascript": 15055
           },
           "built": true,
           "codeGenerated": true,
@@ -18906,9 +19060,9 @@
         {
           "type": "module",
           "moduleType": "css/mini-extract",
-          "size": 7831,
+          "size": 8361,
           "sizes": {
-            "css/mini-extract": 7831
+            "css/mini-extract": 8361
           },
           "built": true,
           "codeGenerated": true,
@@ -19165,9 +19319,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 11875,
+      "size": 15055,
       "sizes": {
-        "javascript": 11875
+        "javascript": 15055
       },
       "built": true,
       "codeGenerated": true,
@@ -19290,7 +19444,21 @@
           "active": true,
           "explanation": "",
           "userRequest": "./config.js",
-          "loc": "22:31-33",
+          "loc": "87:31-33",
+          "moduleId": "./src/homepage.js",
+          "resolvedModuleId": "./src/homepage.js"
+        },
+        {
+          "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "module": "./src/homepage.js",
+          "moduleName": "./src/homepage.js",
+          "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "resolvedModule": "./src/homepage.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "./config.js",
+          "loc": "226:31-33",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19684,7 +19852,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "131:20-23",
+          "loc": "135:20-23",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19698,7 +19866,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "134:12-26",
+          "loc": "138:12-26",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19712,7 +19880,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "140:21-24",
+          "loc": "144:21-24",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19726,7 +19894,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "143:12-26",
+          "loc": "147:12-26",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19740,7 +19908,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "262:24-27",
+          "loc": "250:21-24",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19754,7 +19922,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "266:12-26",
+          "loc": "253:12-26",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19768,7 +19936,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "274:20-23",
+          "loc": "344:24-27",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19782,7 +19950,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "275:0-14",
+          "loc": "348:12-26",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19796,7 +19964,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "280:18-21",
+          "loc": "356:20-23",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19810,7 +19978,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "281:0-14",
+          "loc": "357:0-14",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19824,7 +19992,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "286:18-21",
+          "loc": "362:18-21",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -19838,7 +20006,35 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/storage",
-          "loc": "287:0-14",
+          "loc": "363:0-14",
+          "moduleId": "./src/homepage.js",
+          "resolvedModuleId": "./src/homepage.js"
+        },
+        {
+          "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "module": "./src/homepage.js",
+          "moduleName": "./src/homepage.js",
+          "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "resolvedModule": "./src/homepage.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "firebase/storage",
+          "loc": "368:18-21",
+          "moduleId": "./src/homepage.js",
+          "resolvedModuleId": "./src/homepage.js"
+        },
+        {
+          "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "module": "./src/homepage.js",
+          "moduleName": "./src/homepage.js",
+          "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "resolvedModule": "./src/homepage.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "firebase/storage",
+          "loc": "369:0-14",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         }
@@ -20126,7 +20322,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "animejs",
-          "loc": "229:23-35",
+          "loc": "311:23-35",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         }
@@ -20203,7 +20399,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/firestore",
-          "loc": "22:14-19",
+          "loc": "87:14-19",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -20217,7 +20413,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/firestore",
-          "loc": "22:20-30",
+          "loc": "87:20-30",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -20231,7 +20427,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/firestore",
-          "loc": "22:48-53",
+          "loc": "87:48-53",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -20245,7 +20441,7 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/firestore",
-          "loc": "22:82-89",
+          "loc": "87:82-89",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         },
@@ -20259,7 +20455,77 @@
           "active": true,
           "explanation": "",
           "userRequest": "firebase/firestore",
-          "loc": "23:32-39",
+          "loc": "88:32-39",
+          "moduleId": "./src/homepage.js",
+          "resolvedModuleId": "./src/homepage.js"
+        },
+        {
+          "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "module": "./src/homepage.js",
+          "moduleName": "./src/homepage.js",
+          "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "resolvedModule": "./src/homepage.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "firebase/firestore",
+          "loc": "226:14-19",
+          "moduleId": "./src/homepage.js",
+          "resolvedModuleId": "./src/homepage.js"
+        },
+        {
+          "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "module": "./src/homepage.js",
+          "moduleName": "./src/homepage.js",
+          "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "resolvedModule": "./src/homepage.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "firebase/firestore",
+          "loc": "226:20-30",
+          "moduleId": "./src/homepage.js",
+          "resolvedModuleId": "./src/homepage.js"
+        },
+        {
+          "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "module": "./src/homepage.js",
+          "moduleName": "./src/homepage.js",
+          "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "resolvedModule": "./src/homepage.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "firebase/firestore",
+          "loc": "226:48-53",
+          "moduleId": "./src/homepage.js",
+          "resolvedModuleId": "./src/homepage.js"
+        },
+        {
+          "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "module": "./src/homepage.js",
+          "moduleName": "./src/homepage.js",
+          "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "resolvedModule": "./src/homepage.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "firebase/firestore",
+          "loc": "226:83-90",
+          "moduleId": "./src/homepage.js",
+          "resolvedModuleId": "./src/homepage.js"
+        },
+        {
+          "moduleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "module": "./src/homepage.js",
+          "moduleName": "./src/homepage.js",
+          "resolvedModuleIdentifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
+          "resolvedModule": "./src/homepage.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "firebase/firestore",
+          "loc": "227:32-39",
           "moduleId": "./src/homepage.js",
           "resolvedModuleId": "./src/homepage.js"
         }
@@ -21385,9 +21651,9 @@
     {
       "type": "module",
       "moduleType": "css/mini-extract",
-      "size": 7831,
+      "size": 8361,
       "sizes": {
-        "css/mini-extract": 7831
+        "css/mini-extract": 8361
       },
       "built": true,
       "codeGenerated": true,
@@ -28981,9 +29247,9 @@
       "type": "module",
       "moduleType": "javascript/auto",
       "layer": null,
-      "size": 8690,
+      "size": 9246,
       "sizes": {
-        "javascript": 8690
+        "javascript": 9246
       },
       "built": true,
       "codeGenerated": true,
@@ -29065,8 +29331,8 @@
       "cacheable": true,
       "optional": false,
       "orphan": true,
-      "issuer": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
-      "issuerName": "./src/styles/pages/homepage.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/pages/homepage.css",
+      "issuer": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
+      "issuerName": "./src/styles/navigation/homepage-navbar.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/navigation/homepage-navbar.css",
       "issuerPath": [
         {
           "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
@@ -29074,13 +29340,13 @@
           "id": "./src/homepage.js"
         },
         {
-          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
-          "name": "./src/styles/pages/homepage.css",
-          "id": "./src/styles/pages/homepage.css"
+          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
+          "name": "./src/styles/navigation/homepage-navbar.css",
+          "id": "./src/styles/navigation/homepage-navbar.css"
         },
         {
-          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
-          "name": "./src/styles/pages/homepage.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/pages/homepage.css",
+          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
+          "name": "./src/styles/navigation/homepage-navbar.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/navigation/homepage-navbar.css",
           "id": null
         }
       ],
@@ -29347,8 +29613,8 @@
       "cacheable": true,
       "optional": false,
       "orphan": true,
-      "issuer": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
-      "issuerName": "./src/styles/pages/homepage.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/pages/homepage.css",
+      "issuer": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
+      "issuerName": "./src/styles/navigation/homepage-navbar.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/navigation/homepage-navbar.css",
       "issuerPath": [
         {
           "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\homepage.js",
@@ -29356,13 +29622,13 @@
           "id": "./src/homepage.js"
         },
         {
-          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
-          "name": "./src/styles/pages/homepage.css",
-          "id": "./src/styles/pages/homepage.css"
+          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
+          "name": "./src/styles/navigation/homepage-navbar.css",
+          "id": "./src/styles/navigation/homepage-navbar.css"
         },
         {
-          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\pages\\homepage.css",
-          "name": "./src/styles/pages/homepage.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/pages/homepage.css",
+          "identifier": "D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\node_modules\\css-loader\\dist\\cjs.js!D:\\Documents\\Projects\\Programming\\MikeMcJay\\mikemcjay\\src\\styles\\navigation\\homepage-navbar.css",
+          "name": "./src/styles/navigation/homepage-navbar.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/styles/navigation/homepage-navbar.css",
           "id": null
         }
       ],
@@ -30429,15 +30695,15 @@
       "assets": [
         {
           "name": "./styles/pages/homepage.css",
-          "size": 16381
+          "size": 16911
         },
         {
           "name": "pages/homepage.bundle.js",
-          "size": 2420317
+          "size": 2424129
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 2436698,
+      "assetsSize": 2441040,
       "auxiliaryAssets": [
         {
           "name": "81f6c7f882fcc2dee106.ttf",
@@ -30489,15 +30755,15 @@
       "assets": [
         {
           "name": "./styles/pages/homepage.css",
-          "size": 16381
+          "size": 16911
         },
         {
           "name": "pages/homepage.bundle.js",
-          "size": 2420317
+          "size": 2424129
         }
       ],
       "filteredAssets": 0,
-      "assetsSize": 2436698,
+      "assetsSize": 2441040,
       "auxiliaryAssets": [
         {
           "name": "81f6c7f882fcc2dee106.ttf",

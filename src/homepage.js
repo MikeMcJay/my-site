@@ -6,7 +6,7 @@ import { getAuth, onAuthStateChanged, sendSignInLinkToEmail } from "firebase/aut
 import showPopup from './scripts/popup.js';
 import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 import anime from 'animejs';
-import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, orderBy, query, where } from 'firebase/firestore';
 
 const storage = getStorage();
 const auth = getAuth();
@@ -17,30 +17,29 @@ onAuthStateChanged(auth, (currentUser) => {
 
 });
 
-function createProjectInfo(doc) {
+function createProjectInfo(project) {
     const parentProjectInfoDiv = document.getElementById("projectInfo");
     const projectInfoDiv = document.createElement("div");
-    projectInfoDiv.id = doc.id;
+    projectInfoDiv.id = project.id;
     projectInfoDiv.className = "projectInfo";
     parentProjectInfoDiv.appendChild(projectInfoDiv);
     // Close project info
     const closeAboutPage = document.createElement("img");
-    closeAboutPage.id = doc.id;
+    closeAboutPage.id = project.id;
     closeAboutPage.className = "closeAboutPage";
     projectInfoDiv.appendChild(closeAboutPage);
     // Project info title
     const projectInfoTitle = document.createElement("h2");
-    projectInfoTitle.innerText = doc.data().title;
+    projectInfoTitle.innerText = project.data().title;
     projectInfoDiv.appendChild(projectInfoTitle);
     // Project info links
     const projectLinksDiv = document.createElement("div");
     projectLinksDiv.className = "projectLinks";
     projectInfoDiv.appendChild(projectLinksDiv);
     // Iterate each map element
-    if (doc.data().links != null) {
-        const links = new Map(Object.entries(doc.data().links));
+    if (project.data().links != null) {
+        const links = new Map(Object.entries(project.data().links));
         links.forEach((buttonText, link) => {
-            console.log(buttonText);
             const projectLink = document.createElement("a");
             projectLink.href = link;
             projectLink.target = "_blank";
@@ -58,7 +57,7 @@ function createProjectInfo(doc) {
     projectInfoDiv.appendChild(projectDetailsDiv);
     // Details
     const details = document.createElement("p");
-    details.innerText = doc.data().details;
+    details.innerText = project.data().details;
     projectDetailsDiv.appendChild(details);
     // Labels
     const labelDiv = document.createElement("div");
@@ -66,18 +65,31 @@ function createProjectInfo(doc) {
     labelDiv.setAttribute('style', 'text-align: center;');
     projectDetailsDiv.appendChild(labelDiv);
     // Add each label
-    if (doc.data().labels != null) {
-        const labels = new Map(Object.entries(doc.data().labels));
-        labels.forEach((labelName, labelID) => {
-            const label = document.createElement("div");
-            label.id = labelID;
-            label.className = "languageLabel";
-            labelDiv.appendChild(label);
-            // Label name
-            const name = document.createElement("p");
-            name.setAttribute('style', 'padding: 0px 20px; font-size: large; font-weight: bold;');
-            name.innerText = labelName;
-            label.appendChild(name);
+    if (project.data().labels != null) {
+        const labels = new Map(Object.entries(project.data().labels));
+        // Get the colours from firestore
+        const docRef = doc(db, "styling", "labels");
+        getDoc(docRef).then(docSnap => {
+            if (docSnap.exists()) {
+                labels.forEach((labelName, labelID) => {
+                    const label = document.createElement("div");
+                    label.id = labelID;
+                    label.className = "languageLabel";
+                    // Iterate through every style
+                    const labelStyles = new Map(Object.entries(docSnap.data()));
+                    labelStyles.forEach((hexColour, id) => {
+                        if (id === labelID) {
+                            label.setAttribute("style", `background-color: ${hexColour}`);
+                            labelDiv.appendChild(label);
+                            // Label name
+                            const name = document.createElement("p");
+                            name.setAttribute('style', 'padding: 0px 20px; font-size: large; font-weight: bold;');
+                            name.innerText = labelName;
+                            label.appendChild(name);
+                        }
+                    })
+                });
+            }
         });
     }   
 }

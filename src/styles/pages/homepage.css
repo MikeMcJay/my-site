@@ -1,11 +1,15 @@
 /* Desktop / laptops / tablets */
 @media (min-width: 800px) {
+    #logo {
+        width: 75px;
+    }
     #intro {
         width: 800px;
     }
     #mikemcjay, #_ {
         font-size: 120px; 
         margin-bottom: -30px;
+        margin-top: -30px;
     }
     #about {
         margin-left: 30px;
@@ -84,18 +88,22 @@
     }
     #linkedIn, #github, #gitlab {
         width: 50px;
-        margin-right: 40px;
+        margin: 40px;
     }
 }
 
 /* Phones */
 @media (max-width: 800px) {
+    #logo {
+        width: 50px;
+    }
     #intro {
         width: 375px;
     }
     #mikemcjay, #_ {
         font-size: 60px; 
         margin-bottom: -15px;
+        margin-top: -10px;
     }
     #about {
         margin-left: 10px;
@@ -163,8 +171,7 @@
     }
     #linkedIn, #github, #gitlab {
         width: 25px;
-        margin-top: 15px;
-        margin-right: 10px;
+        margin: 15px;
     }
 }
 
@@ -355,7 +362,7 @@
 
 #contact {
     width: 100%; 
-    background-color: var(--gray); 
+    background-color: var(--maroon-see-through); 
     color: black; 
     box-sizing: border-box; 
     margin-top: 50px; 

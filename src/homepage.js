@@ -147,23 +147,28 @@ getProjectHighlights().then(() => {
     )
 
     // Closes the project info div
+    function closeProjectInfo(projectInfoElement) {
+        anime({
+            targets: projectInfoElement,
+            scale: [1, 0],
+            easing: 'easeInOutQuad',
+            duration: 500
+        });
+        projectInfoElement.className = projectInfoElement.className.replace("projectInfo show", "projectInfo");
+        const content = document.getElementById("outerContent");
+        content.className = content.className.replace("blur", "");
+        const body = document.body;
+        body.className = body.className.replace("blur", "");
+    }
+
+    // Add the close project info functionality to the close buttons
     Array.from(document.getElementsByClassName("closeAboutPage")).forEach(
         function(closeButtonElement, index, array) {
             closeButtonElement.addEventListener("click", function() {
                 Array.from(document.getElementsByClassName("projectInfo show")).forEach(
                     function(projectInfoElement, index, array) {
                         if (projectInfoElement.id == closeButtonElement.id) {
-                            anime({
-                                targets: projectInfoElement,
-                                scale: [1, 0],
-                                easing: 'easeInOutQuad',
-                                duration: 500
-                            });
-                            projectInfoElement.className = projectInfoElement.className.replace("projectInfo show", "projectInfo");
-                            const content = document.getElementById("outerContent");
-                            content.className = content.className.replace("blur", "");
-                            const body = document.body;
-                            body.className = body.className.replace("blur", "");
+                            closeProjectInfo(projectInfoElement);
                         }
                     }
                 )
@@ -377,6 +382,12 @@ function typeUsername(index, nameToTypeOut) {
 typeUsername(0, "MikeMcJay");
 
 /* Insert images */
+const logo = document.getElementById("logo");
+const logoRef = ref(storage, "images/common/logo.png");
+getDownloadURL(logoRef).then((url) => {
+    logo.src = url;
+});
+
 const collectACardRef = ref(storage, "images/common/collect-a-card.gif");
 Array.from(document.getElementsByClassName("projectBanner")).forEach(
     function(projectBanner, index, array) {
@@ -430,7 +441,7 @@ linkButtonIDs.forEach((ID => {
 
 // Text introduction
 anime({
-    targets: ['#subtitle', '#about', '#highlights', '#projectHighlights', '#projText', '#projects', '#contact'],
+    targets: ['#links', '#subtitle', '#about', '#highlights', '#projectHighlights', '#projText', '#projects', '#contact'],
     opacity: [0, 1],
     easing: 'easeInOutQuad',
     delay: anime.stagger(100, {start: 500}),

@@ -6,7 +6,7 @@
     }
 
     .navbar {
-        background-color: var(--gray-see-through);
+        background-color: var(--maroon-see-through);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         height: 100px;
@@ -26,7 +26,12 @@
     .navbar-left {
         float: left;
         padding-left: 30px;
-        padding-top: 25px;
+        padding-top: 15px;
+    }
+
+    .navbar-center {
+        text-align: center;
+        padding-top: 15px;
     }
 
     .navtext {
@@ -44,10 +49,10 @@
     }
 
     .navbar {
-        background-color: var(--gray-see-through);
+        background-color: var(--maroon-see-through);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        height: 100px;
+        height: 90px;
         width: 100%;
         position: sticky;
         top: 0;
@@ -67,6 +72,11 @@
         padding-left: 10px;
         padding-top: 25px;
         z-index: 2;
+    }
+
+    .navbar-center {
+        text-align: center;
+        padding-top: 15px;
     }
 
     .navtext {

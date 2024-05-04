@@ -19,12 +19,16 @@
   \*********************************************************************************/
 /* Desktop / laptops / tablets */
 @media (min-width: 800px) {
+    #logo {
+        width: 75px;
+    }
     #intro {
         width: 800px;
     }
     #mikemcjay, #_ {
         font-size: 120px; 
         margin-bottom: -30px;
+        margin-top: -30px;
     }
     #about {
         margin-left: 30px;
@@ -103,18 +107,22 @@
     }
     #linkedIn, #github, #gitlab {
         width: 50px;
-        margin-right: 40px;
+        margin: 40px;
     }
 }
 
 /* Phones */
 @media (max-width: 800px) {
+    #logo {
+        width: 50px;
+    }
     #intro {
         width: 375px;
     }
     #mikemcjay, #_ {
         font-size: 60px; 
         margin-bottom: -15px;
+        margin-top: -10px;
     }
     #about {
         margin-left: 10px;
@@ -182,8 +190,7 @@
     }
     #linkedIn, #github, #gitlab {
         width: 25px;
-        margin-top: 15px;
-        margin-right: 10px;
+        margin: 15px;
     }
 }
 
@@ -374,7 +381,7 @@
 
 #contact {
     width: 100%; 
-    background-color: var(--gray); 
+    background-color: var(--maroon-see-through); 
     color: black; 
     box-sizing: border-box; 
     margin-top: 50px; 
@@ -415,7 +422,7 @@ body.blur {
     }
 
     .navbar {
-        background-color: var(--gray-see-through);
+        background-color: var(--maroon-see-through);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         height: 100px;
@@ -435,7 +442,12 @@ body.blur {
     .navbar-left {
         float: left;
         padding-left: 30px;
-        padding-top: 25px;
+        padding-top: 15px;
+    }
+
+    .navbar-center {
+        text-align: center;
+        padding-top: 15px;
     }
 
     .navtext {
@@ -453,10 +465,10 @@ body.blur {
     }
 
     .navbar {
-        background-color: var(--gray-see-through);
+        background-color: var(--maroon-see-through);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        height: 100px;
+        height: 90px;
         width: 100%;
         position: sticky;
         top: 0;
@@ -476,6 +488,11 @@ body.blur {
         padding-left: 10px;
         padding-top: 25px;
         z-index: 2;
+    }
+
+    .navbar-center {
+        text-align: center;
+        padding-top: 15px;
     }
 
     .navtext {
@@ -556,6 +573,10 @@ button:disabled {
     --gray-see-through-alt: #c4c4c4d5;
     --white: #f0f0f0;
     --white-alt: #dfdfdf;
+    --maroon: #334433;
+    --maroon-see-through: #334433c5;
+    --scroll-thumb: #c4c4c4;
+    --scroll-thumb-hover: #acacac;
 }
 
 body {
@@ -746,11 +767,11 @@ a:hover {
 
 *::-webkit-scrollbar-thumb {
     border-radius: 15px;
-    background: var(--gray);
+    background: var(--scroll-thumb);
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background: var(--gray-alt);
+    background: var(--scroll-thumb-hover);
 }
 
 /* Popup */

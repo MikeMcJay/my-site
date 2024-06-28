@@ -2,6 +2,7 @@ import React from "react"
 import { TopNavBar } from "../components/navbar"
 import { Subheading } from "../components/text"
 import AboutPanel from "../components/homepage/about"
+import ProjectPanel from "../components/homepage/projects"
 
 export default function Page() {
     return (
@@ -15,6 +16,7 @@ export default function Page() {
                 <Subheading className="subheading2">Subheading 2</Subheading>
                 <p>Paragraph</p>
                 <AboutPanel/>
+                <ProjectPanel/>
             </div>
         </div>
     )

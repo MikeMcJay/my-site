@@ -4,10 +4,6 @@
 
 /* Stylings for base components */
 @layer base {
-    /* Text */
-    p {
-        @apply font-medium;
-    }
     /* Headers */
     h1 {
         @apply text-7xl font-bold;

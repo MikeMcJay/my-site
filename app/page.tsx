@@ -1,6 +1,7 @@
 import React from "react"
 import { TopNavBar } from "../components/navbar"
 import { Subheading } from "../components/text"
+import AboutPanel from "../components/homepage/about"
 
 export default function Page() {
     return (
@@ -12,6 +13,8 @@ export default function Page() {
                 <h3>Heading three</h3>
                 <Subheading>Subheading 1</Subheading>
                 <Subheading className="subheading2">Subheading 2</Subheading>
+                <p>Paragraph</p>
+                <AboutPanel/>
             </div>
         </div>
     )

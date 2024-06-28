@@ -67,3 +67,6 @@ node_modules/
 
 # Don't include our firebase config file
 src/firebaseConfig.js
+
+# Don't include the generated .next folder
+.next

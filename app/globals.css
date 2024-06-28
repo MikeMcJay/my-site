@@ -2,14 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Stylings for base components */
 @layer base {
+    /* Headers */
     h1 {
         @apply text-7xl font-bold;
     }
     h2 {
-        @apply text-5xl font-semibold;
+        @apply text-6xl font-semibold;
     }
     h3 {
-        @apply text-3xl font-semibold;
+        @apply text-4xl font-semibold;
+    }
+    /* Sub headers */
+    .subheading1 {
+        @apply font-mono text-3xl font-semibold;
+    }
+    .subheading2 {
+        @apply font-mono text-2xl font-semibold;
+    }
+    /* Body */
+    .content {
+        @apply p-10;
+    }
+}
+
+/* Stylings for components */
+@layer components {
+    .top-nav-bar {
+        @apply flex flex-row items-center p-10;
+    }
+    .top-nav-bar-brand {
+        @apply h-8 w-auto;
+    }
+    .top-nav-bar-button {
+        @apply font-mono flex flex-row gap-5 absolute right-10;
     }
 }

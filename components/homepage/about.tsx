@@ -2,18 +2,18 @@
 
 export default function AboutPanel() {
     return (
-        <div className="flex flex-col py-10 gap-5">
+        <div className="about-panel">
             <h3>About</h3>
-            <div className="flex flex-row gap-10 items-top">
-                <div className="basis-2/3 gap-5">
+            <div className="about-panel-description-container">
+                <div className="about-panel-description">
                     This is where I speak about stuff blah blah blah. This is where I speak about stuff blah blah blah. 
                     This is where I speak about stuff blah blah blah. This is where I speak about stuff blah blah blah.
                     This is where I speak about stuff blah blah blah. This is where I speak about stuff blah blah blah. 
                     This is where I speak about stuff blah blah blah. This is where I speak about stuff blah blah blah.
                 </div>
-                <div className="flex basis-1/3 justify-center">
+                <div className="about-panel-image-container">
                     <img
-                        className="h-48 w-auto"
+                        className="about-panel-image"
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                         alt="MikeMcJay"
                     />

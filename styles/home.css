@@ -1,0 +1,54 @@
+/* About component */
+.about-panel {
+    @apply flex flex-col py-10 gap-5;
+}
+.about-panel-description-container {
+    @apply flex flex-row gap-10 items-start;
+}
+.about-panel-description {
+    @apply basis-2/3 gap-5;
+}
+.about-panel-image-container {
+    @apply flex basis-1/3 justify-center;
+}
+.about-panel-image {
+    @apply h-48 w-auto;
+}
+/* Project component */
+.project-panel {
+    @apply flex flex-col py-10 gap-10;
+}
+.project-highlight-container {
+    @apply flex flex-row gap-10 items-center;
+}
+.project-highlight-image-container {
+    @apply flex basis-3/5 justify-center;
+}
+.project-highlight-image {
+    @apply h-96 w-auto;
+}
+.project-highlight {
+    @apply flex flex-col basis-2/5 text-end;
+}
+.project-highlight-details {
+    @apply flex flex-col gap-5;
+}
+.project-highlight-tags {
+    @apply flex flex-row gap-5 items-center justify-end;
+}
+.other-projects-container {
+    @apply grid gap-5 grid-cols-3;
+}
+.other-project {
+    @apply flex flex-col gap-5 p-10 bg-slate-300;
+}
+.other-project-tags {
+    @apply flex flex-wrap gap-2 pt-5;
+}
+/* Contact panel */
+.contact-panel {
+    @apply flex flex-col gap-5 items-center pt-10;
+}
+.contact-panel-description {
+    @apply w-96 text-center;
+}

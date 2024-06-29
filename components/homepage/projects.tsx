@@ -1,12 +1,12 @@
 'use client'
 
-import { Subheading } from "../text"
-
 export default function ProjectPanel() {
     return (
-        <div className="flex flex-col py-10 gap-5">
+        <div className="flex flex-col py-10 gap-10">
             <h3>Project highlights</h3>
             <ProjectHighlight/>
+            <h3 className="self-center">Other projects</h3>
+            <OtherProjects/>
         </div>
     )
 }
@@ -22,7 +22,7 @@ function ProjectHighlight() {
                 />
             </div>
             <div className="flex flex-col basis-2/5 text-end">
-                <Subheading className="subheading2">Recent</Subheading>
+                <p className="subheading2">Recent</p>
                 <h3>Project name</h3>
                 <div className="flex flex-col gap-5">
                     <div className="pt-5">
@@ -38,6 +38,30 @@ function ProjectHighlight() {
                     </div>
                 </div>
             </div>
+        </div>
+    )
+}
+
+const projects = [
+    { name: "Project 1", description: "A small description of this project", tags: ["Tag 1", "Tag 2", "Tag 3", "Tag 4", "Tag 5", "Tag 6"] },
+    { name: "Project 2", description: "A small description of this project", tags: ["Tag 1", "Tag 2", "Tag 3"] },
+    { name: "Project 3", description: "A small description of this project", tags: ["Tag 1", "Tag 2", "Tag 3"] },
+]
+
+function OtherProjects() {
+    return (
+        <div className="grid gap-5 grid-cols-3">
+            {projects.map((project) => (
+                <div key={project.name} className="flex flex-col gap-5 p-10 bg-slate-300">
+                    <h4>{project.name}</h4>
+                    <p>{project.description}</p>
+                    <div className="flex flex-wrap gap-2 pt-5">
+                        {project.tags.map((tag) => (
+                            <p className="caption">{tag}</p>
+                        ))}
+                    </div>
+                </div>
+            ))}
         </div>
     )
 }

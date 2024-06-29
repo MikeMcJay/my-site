@@ -24,6 +24,10 @@
     .subheading2 {
         @apply font-mono text-2xl font-bold;
     }
+    /* Caption */
+    .caption {
+        @apply font-mono;
+    }
     /* Body */
     .content {
         @apply p-10 pt-28;

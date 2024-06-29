@@ -1,6 +1,5 @@
 import React from "react"
 import { TopNavBar } from "../components/navbar"
-import { Subheading } from "../components/text"
 import AboutPanel from "../components/homepage/about"
 import ProjectPanel from "../components/homepage/projects"
 
@@ -12,8 +11,8 @@ export default function Page() {
                 <h1>Heading one</h1>
                 <h2>Heading two</h2>
                 <h3>Heading three</h3>
-                <Subheading>Subheading 1</Subheading>
-                <Subheading className="subheading2">Subheading 2</Subheading>
+                <p className="subheading1">Subheading 1</p>
+                <p className="subheading2">Subheading 2</p>
                 <p>Paragraph</p>
                 <AboutPanel/>
                 <ProjectPanel/>

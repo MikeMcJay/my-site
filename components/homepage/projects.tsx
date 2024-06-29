@@ -5,7 +5,7 @@ export default function ProjectPanel() {
         <div className="flex flex-col py-10 gap-10">
             <h3>Project highlights</h3>
             <ProjectHighlight/>
-            <h3 className="self-center">Other projects</h3>
+            <h4 className="self-center">Other projects</h4>
             <OtherProjects/>
         </div>
     )
@@ -23,7 +23,7 @@ function ProjectHighlight() {
             </div>
             <div className="flex flex-col basis-2/5 text-end">
                 <p className="subheading2">Recent</p>
-                <h3>Project name</h3>
+                <h4>Project name</h4>
                 <div className="flex flex-col gap-5">
                     <div className="pt-5">
                         <p>A description of the project that you've made. This should tell us allll about what

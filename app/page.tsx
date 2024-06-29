@@ -2,6 +2,7 @@ import React from "react"
 import { TopNavBar } from "../components/navbar"
 import AboutPanel from "../components/homepage/about"
 import ProjectPanel from "../components/homepage/projects"
+import ContactPanel from "../components/homepage/contact"
 
 export default function Page() {
     return (
@@ -16,6 +17,7 @@ export default function Page() {
                 <p>Paragraph</p>
                 <AboutPanel/>
                 <ProjectPanel/>
+                <ContactPanel/>
             </div>
         </div>
     )

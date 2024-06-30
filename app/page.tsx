@@ -3,6 +3,7 @@ import { TopNavBar } from "../components/navbar"
 import AboutPanel from "../components/homepage/about"
 import ProjectPanel from "../components/homepage/projects"
 import ContactPanel from "../components/homepage/contact"
+import { Footer } from "../components/footer"
 
 export default function Page() {
     return (
@@ -18,6 +19,7 @@ export default function Page() {
                 <AboutPanel/>
                 <ProjectPanel/>
                 <ContactPanel/>
+                <Footer/>
             </div>
         </div>
     )

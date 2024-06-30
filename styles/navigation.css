@@ -8,3 +8,7 @@
 .top-nav-bar-button {
     @apply font-mono flex flex-row gap-5 right-10 absolute;
 }
+/* Footer */
+.footer {
+    @apply flex flex-col py-10 items-center mt-28;
+}

@@ -33,6 +33,6 @@
     }
     /* Body */
     .content {
-        @apply p-10 pt-28;
+        @apply px-10 pt-28;
     }
 }

@@ -4,24 +4,29 @@ export default function ProjectPanel() {
     return (
         <div className="project-panel">
             <h3>Project highlights</h3>
-            <ProjectHighlight/>
+            <ProjectHighlight left={false}/>
+            <ProjectHighlight left={true}/>
             <h4 className="self-center">Other projects</h4>
             <OtherProjects/>
         </div>
     )
 }
 
-function ProjectHighlight() {
+function ProjectHighlight({
+    left
+}: {
+    left: boolean
+}) {
     return (
         <div className="project-highlight-container">
-            <div className="project-highlight-image-container">
+            <div className={left? "project-highlight-image-container-left" : "project-highlight-image-container-right"}>
                 <img
                     className="project-highlight-image"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     alt="MikeMcJay"
                 />
             </div>
-            <div className="project-highlight">
+            <div className={left? "project-highlight-left" : "project-highlight-right"}>
                 <p className="subheading2">Recent</p>
                 <h4>Project name</h4>
                 <div className="project-highlight-details">
@@ -30,7 +35,7 @@ function ProjectHighlight() {
                             sorta good stuff you got up to with it.
                         </p>
                     </div>
-                    <div className="project-highlight-tags">
+                    <div className={left? "project-highlight-tags-left" : "project-highlight-tags-right"}>
                         <p>Tag 1</p>
                         <p>Tag 2</p>
                         <p>Tag 3</p>

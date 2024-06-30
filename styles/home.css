@@ -21,20 +21,38 @@
 .project-highlight-container {
     @apply flex flex-row gap-10 items-center;
 }
-.project-highlight-image-container {
+.project-highlight-image-container-left, .project-highlight-image-container-right {
     @apply flex basis-3/5 justify-center;
+}
+.project-highlight-image-container-left {
+    @apply order-2;
+}
+.project-highlight-image-container-right {
+    @apply order-1;
 }
 .project-highlight-image {
     @apply h-96 w-auto;
 }
-.project-highlight {
-    @apply flex flex-col basis-2/5 text-end;
+.project-highlight-left, .project-highlight-right {
+    @apply flex flex-col basis-2/5;
+}
+.project-highlight-left {
+    @apply text-start order-1;
+}
+.project-highlight-right {
+    @apply text-end order-2;
 }
 .project-highlight-details {
     @apply flex flex-col gap-5;
 }
-.project-highlight-tags {
-    @apply flex flex-row gap-5 items-center justify-end;
+.project-highlight-tags-left, .project-highlight-tags-right {
+    @apply flex flex-row gap-5 items-center;
+}
+.project-highlight-tags-left {
+    @apply justify-start;
+}
+.project-highlight-tags-right {
+    @apply justify-end;
 }
 .other-projects-container {
     @apply grid gap-5 grid-cols-3;

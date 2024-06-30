@@ -1,6 +1,9 @@
+import configuration from '../src/config';
 import { ReactNode } from "react"
 
 import './globals.css'
+
+configuration
 
 export default function RootLayout({
     children,

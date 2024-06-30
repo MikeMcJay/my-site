@@ -1,11 +1,26 @@
 'use client'
 
+import { useEffect, useState } from "react";
+import { getProjectHighlights } from "../../src/scripts/projects";
+import { Project } from "../../src/types";
+
 export default function ProjectPanel() {
+    const [projectHighlights, setProjectHighlights] = useState<Map<string, Project>>(new Map());
+
+    useEffect(() => {
+        getProjectHighlights().then((snapshot) => {
+            snapshot.forEach((project) => {
+                setProjectHighlights(map => new Map(map.set(project.id, project.data() as Project)));
+            });
+        })
+    }, []);
+
     return (
         <div className="project-panel">
             <h3>Project highlights</h3>
-            <ProjectHighlight left={false}/>
-            <ProjectHighlight left={true}/>
+            {Array.from(projectHighlights).map((project, index) => (
+                <ProjectHighlight key={project[0]} project={project[1]} left={!(index % 2 === 0)}/>
+            ))}
             <h4 className="self-center">Other projects</h4>
             <OtherProjects/>
         </div>
@@ -13,8 +28,10 @@ export default function ProjectPanel() {
 }
 
 function ProjectHighlight({
+    project,
     left
 }: {
+    project: Project,
     left: boolean
 }) {
     return (
@@ -28,18 +45,15 @@ function ProjectHighlight({
             </div>
             <div className={left? "project-highlight-left" : "project-highlight-right"}>
                 <p className="subheading2">Recent</p>
-                <h4>Project name</h4>
+                <h4>{project.title}</h4>
                 <div className="project-highlight-details">
                     <div className="pt-5">
-                        <p>A description of the project that you've made. This should tell us allll about what
-                            sorta good stuff you got up to with it.
-                        </p>
+                        <p>{project.subtitle}</p>
                     </div>
                     <div className={left? "project-highlight-tags-left" : "project-highlight-tags-right"}>
-                        <p>Tag 1</p>
-                        <p>Tag 2</p>
-                        <p>Tag 3</p>
-                        <p>Tag 4</p>
+                        {Object.entries(project.labels).map((tag) => (
+                            <p>{tag[1]}</p>
+                        ))}
                     </div>
                 </div>
             </div>

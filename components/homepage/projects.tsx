@@ -1,18 +1,24 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { getProjectHighlights } from "../../src/scripts/projects";
+import { getOtherProjects, getProjectHighlights } from "../../src/scripts/projects";
 import { Project } from "../../src/types";
 
 export default function ProjectPanel() {
     const [projectHighlights, setProjectHighlights] = useState<Map<string, Project>>(new Map());
+    const [otherProjects, setOtherProjects] = useState<Map<string, Project>>(new Map());
 
     useEffect(() => {
         getProjectHighlights().then((snapshot) => {
             snapshot.forEach((project) => {
                 setProjectHighlights(map => new Map(map.set(project.id, project.data() as Project)));
             });
-        })
+        });
+        getOtherProjects().then((snapshot) => {
+            snapshot.forEach((project) => {
+                setOtherProjects(map => new Map(map.set(project.id, project.data() as Project)));
+            });
+        });
     }, []);
 
     return (
@@ -22,7 +28,11 @@ export default function ProjectPanel() {
                 <ProjectHighlight key={project[0]} project={project[1]} left={!(index % 2 === 0)}/>
             ))}
             <h4 className="self-center">Other projects</h4>
-            <OtherProjects/>
+            <div className="other-projects-container">
+                {Array.from(otherProjects).map((project) => (
+                    <OtherProjects key={project[0]} project={project[1]}/>
+                ))}    
+            </div>       
         </div>
     )
 }
@@ -61,26 +71,20 @@ function ProjectHighlight({
     )
 }
 
-const projects = [
-    { name: "Project 1", description: "A small description of this project", tags: ["Tag 1", "Tag 2", "Tag 3", "Tag 4", "Tag 5", "Tag 6"] },
-    { name: "Project 2", description: "A small description of this project", tags: ["Tag 1", "Tag 2", "Tag 3"] },
-    { name: "Project 3", description: "A small description of this project", tags: ["Tag 1", "Tag 2", "Tag 3"] },
-]
-
-function OtherProjects() {
+function OtherProjects({
+    project
+}: {
+    project: Project
+}) {
     return (
-        <div className="other-projects-container">
-            {projects.map((project) => (
-                <div key={project.name} className="other-project">
-                    <h4>{project.name}</h4>
-                    <p>{project.description}</p>
-                    <div className="other-project-tags">
-                        {project.tags.map((tag) => (
-                            <p className="caption">{tag}</p>
-                        ))}
-                    </div>
-                </div>
-            ))}
+        <div key={project.title} className="other-project">
+            <h4>{project.title}</h4>
+            <p>{project.subtitle}</p>
+            <div className="project-highlight-tags-left">
+                {Object.entries(project.labels).map((tag) => (
+                    <p>{tag[1]}</p>
+                ))}
+            </div>
         </div>
     )
 }

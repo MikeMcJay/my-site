@@ -6,3 +6,9 @@ export async function getProjectHighlights() {
     const q = query(projectHighlightRef, where("isHighlight", "==", true));
     return await getDocs(q);
 }
+
+export async function getOtherProjects() {
+    const otherProjectRefs = collection(db, "projects");
+    const q = query(otherProjectRefs, where("isHighlight", "==", false));
+    return await getDocs(q);
+}

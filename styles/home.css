@@ -30,6 +30,15 @@
 .project-highlight-image-container-right {
     @apply order-1;
 }
+.project-highlight-links-left, .project-highlight-links-right {
+    @apply flex flex-wrap gap-5;
+}
+.project-highlight-links-left {
+    @apply self-start;
+}
+.project-highlight-links-right {
+    @apply self-end;
+}
 .project-highlight-image {
     @apply h-96 w-auto;
 }
@@ -62,6 +71,9 @@
 }
 .other-project-tags {
     @apply flex flex-wrap gap-2 pt-5;
+}
+.other-project-links {
+    @apply flex flex-wrap gap-5;
 }
 /* Contact panel */
 .contact-panel {

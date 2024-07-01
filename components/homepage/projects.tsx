@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getOtherProjects, getProjectHighlights } from "../../src/scripts/projects";
 import { Project } from "../../src/types";
 import { LinkIcon } from "../icon";
+import { Tag } from "../tag";
 
 export default function ProjectPanel() {
     const [projectHighlights, setProjectHighlights] = useState<Map<string, Project>>(new Map());
@@ -63,7 +64,7 @@ function ProjectHighlight({
                     </div>
                     <div className={left? "project-highlight-tags-left" : "project-highlight-tags-right"}>
                         {Object.entries(project.labels).map((tag) => (
-                            <p>{tag[1]}</p>
+                            <Tag tagID={tag[0]} tagName={tag[1]}/>
                         ))}
                     </div>
                     {(project.links != null) && <div className={left? "project-highlight-links-left" : "project-highlight-links-right"}>
@@ -89,7 +90,7 @@ function OtherProjects({
             <p>{project.subtitle}</p>
             <div className="project-highlight-tags-left">
                 {Object.entries(project.labels).map((tag) => (
-                    <p>{tag[1]}</p>
+                    <Tag tagID={tag[0]} tagName={tag[1]}/>
                 ))}
             </div>
             {(project.links != null) && <div className="other-project-links">

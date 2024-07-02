@@ -20,12 +20,6 @@ export default function configuration() {
     const storage = getStorage();
     // Firebase firestore service
     const firestore = getFirestore();
-
-    if (location.hostname === "127.0.0.1") {
-        connectAuthEmulator(auth, "http://127.0.0.1:9099");
-        connectStorageEmulator(storage, "127.0.0.1", 9199);
-        connectFirestoreEmulator(firestore, "127.0.0.1", 8080)
-    }
 }
 
 export const db = getFirestore(app)

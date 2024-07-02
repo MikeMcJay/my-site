@@ -6,6 +6,23 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        diffuse: 'diffuse 30s cubic-bezier(0.4, 0, 1, 1) infinite',
+      },
+      keyframes: {
+        diffuse: {
+          '0%, 100%': { filter: "hue-rotate(0deg) blur(64px)" },
+          '10%': { filter: "hue-rotate(15deg) blur(64px)" },
+          '20%': { filter: "hue-rotate(30deg) blur(64px)" },
+          '30%': { filter: "hue-rotate(45deg) blur(64px)" },
+          '40%': { filter: "hue-rotate(60deg) blur(64px)" },
+          '50%': { filter: "hue-rotate(90deg) blur(64px)" },
+          '60%': { filter: "hue-rotate(120deg) blur(64px)" },
+          '70%': { filter: "hue-rotate(145deg) blur(64px)" },
+          '80%': { filter: "hue-rotate(160deg) blur(64px)" },
+          '90%': { filter: "hue-rotate(180deg) blur(64px)" },
+        }
+      },
       spacing: {
         128: "40rem"
       },

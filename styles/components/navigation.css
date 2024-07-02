@@ -1,6 +1,6 @@
 /* Top bar navigation stylings */
 .top-nav-bar {
-    @apply dark:bg-gray-950/90 w-screen flex flex-row items-center px-10 py-2 fixed backdrop-blur-md;
+    @apply w-screen flex flex-row items-center px-10 py-2 fixed backdrop-blur-md;
 }
 .top-nav-bar-brand {
     @apply h-14 w-auto;

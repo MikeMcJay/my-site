@@ -12,7 +12,7 @@
     @apply flex basis-1/3 justify-center;
 }
 .about-panel-image {
-    @apply h-48 w-auto;
+    @apply rounded-xl h-96 w-auto;
 }
 /* Project component */
 .project-panel {

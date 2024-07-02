@@ -1,6 +1,16 @@
 'use client'
 
+import { useEffect, useState } from "react";
+import { getProfilePicture } from "../../src/scripts/about";
+
 export default function AboutPanel() {
+    const [profilePictureURL, setProfilePictureURL] = useState("");
+    useEffect(() => {
+        getProfilePicture().then((url) => {
+            setProfilePictureURL(url);
+        })
+    }, []);
+
     return (
         <div className="about-panel">
             <h3>About</h3>
@@ -14,7 +24,7 @@ export default function AboutPanel() {
                 <div className="about-panel-image-container">
                     <img
                         className="about-panel-image"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                        src={profilePictureURL}
                         alt="MikeMcJay"
                     />
                 </div>

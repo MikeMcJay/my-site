@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { fullConfig } from "../app/layout";
+import resolveConfig from "tailwindcss/resolveConfig"
+import tailwindConfig from "../tailwind.config"
+
+// Useful for getting details on the current tailwind setup
+const fullConfig = resolveConfig(tailwindConfig);
 
 export function Tag({
     tagID,

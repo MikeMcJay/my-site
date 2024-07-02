@@ -1,13 +1,15 @@
-/* Welcome */
+/* About component */
 .welcome {
+    @apply pb-28;
+}
+.welcome-message {
     @apply text-gray-500;
 }
-/* About component */
 .about-panel {
-    @apply flex flex-col py-10 gap-5;
+    @apply flex flex-col py-10 gap-5 xl:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm;
 }
 .about-panel-description-container {
-    @apply flex flex-row gap-10 items-start;
+    @apply flex flex-col md:flex-row gap-10 items-center md:items-start;
 }
 .about-panel-description {
     @apply basis-2/3 gap-5;
@@ -16,14 +18,14 @@
     @apply flex basis-1/3 justify-center;
 }
 .about-panel-image {
-    @apply rounded-xl h-96 w-auto;
+    @apply rounded-xl h-80 md:h-max w-auto;
 }
 /* Project component */
 .project-panel {
-    @apply flex flex-col py-10 gap-10;
+    @apply flex flex-col py-10 gap-20 xl:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm;
 }
 .project-highlight-container {
-    @apply flex flex-row gap-10 items-center;
+    @apply flex flex-col md:flex-row gap-10 items-center;
 }
 .project-highlight-image-container-left, .project-highlight-image-container-right {
     @apply flex basis-3/5 justify-center;
@@ -38,37 +40,37 @@
     @apply flex flex-wrap gap-5;
 }
 .project-highlight-links-left {
-    @apply self-start;
+    @apply self-center md:self-start;
 }
 .project-highlight-links-right {
-    @apply self-end;
+    @apply self-center md:self-end;
 }
 .project-highlight-image {
-    @apply rounded-3xl h-96 w-auto;
+    @apply rounded-3xl h-44 md:h-max w-auto;
 }
 .project-highlight-left, .project-highlight-right {
     @apply flex flex-col basis-2/5;
 }
 .project-highlight-left {
-    @apply text-start order-1;
+    @apply text-center md:text-start order-2 md:order-1;
 }
 .project-highlight-right {
-    @apply text-end order-2;
+    @apply text-center md:text-end order-2 md:order-1;
 }
 .project-highlight-details {
     @apply flex flex-col gap-5;
 }
 .project-highlight-tags-left, .project-highlight-tags-right {
-    @apply flex flex-wrap gap-5 items-end ;
+    @apply flex flex-wrap gap-5 items-end;
 }
 .project-highlight-tags-left {
-    @apply justify-start;
+    @apply justify-center md:justify-start;
 }
 .project-highlight-tags-right {
-    @apply justify-end;
+    @apply justify-center md:justify-end;
 }
 .other-projects-container {
-    @apply grid gap-5 grid-cols-3;
+    @apply grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3;
 }
 .other-project {
     @apply rounded-md flex flex-col gap-5 p-10 bg-slate-300 dark:bg-gray-800;
@@ -77,12 +79,12 @@
     @apply flex flex-wrap gap-2 pt-5;
 }
 .other-project-links {
-    @apply flex flex-wrap gap-5;
+    @apply flex flex-wrap gap-5 justify-center md:justify-start;
 }
 /* Contact panel */
 .contact-panel {
     @apply flex flex-col gap-5 items-center pt-10;
 }
 .contact-panel-description {
-    @apply w-96 text-center;
+    @apply max-w-screen-sm text-center;
 }

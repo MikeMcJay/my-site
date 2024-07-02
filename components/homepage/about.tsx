@@ -13,6 +13,11 @@ export default function AboutPanel() {
 
     return (
         <div className="about-panel">
+            <div className="welcome">
+                <p className="subheading1">Hi there, I'm</p>
+                <h1>MikeMcJay.</h1>
+                <h3>Welcome to my site.</h3>
+            </div>
             <h3>About</h3>
             <div className="about-panel-description-container">
                 <div className="about-panel-description">

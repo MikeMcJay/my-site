@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        128: "40rem"
+      },
       colors: {
         adobeXD: {
           50: "#99147a",

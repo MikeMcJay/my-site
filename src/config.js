@@ -6,8 +6,6 @@ import { getStorage, ref, getDownloadURL, connectStorageEmulator } from "firebas
 import { connectFirestoreEmulator, getFirestore } from '@firebase/firestore';
 import { firebaseConfig } from './firebaseConfig';
 
-firebaseConfig
-
 // Initialize Firebas
 const app = initializeApp(firebaseConfig);
 

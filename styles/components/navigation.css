@@ -1,12 +1,12 @@
 /* Top bar navigation stylings */
 .top-nav-bar {
-    @apply w-screen flex flex-row items-center px-10 py-2 fixed bg-slate-200;
+    @apply dark:bg-gray-950/90 w-screen flex flex-row items-center px-10 py-2 fixed backdrop-blur-md;
 }
 .top-nav-bar-brand {
     @apply h-14 w-auto;
 }
 .top-nav-bar-button {
-    @apply font-mono flex flex-row gap-5 right-10 absolute;
+    @apply dark:text-white font-mono flex flex-row gap-5 right-10 absolute;
 }
 /* Footer */
 .footer {

@@ -10,12 +10,9 @@ export default function Page() {
         <div>
             <TopNavBar/>
             <div className="content">
-                <h1>Heading one</h1>
-                <h2>Heading two</h2>
-                <h3>Heading three</h3>
-                <p className="subheading1">Subheading 1</p>
-                <p className="subheading2">Subheading 2</p>
-                <p>Paragraph</p>
+                <p className="subheading1">Hi there, I'm</p>
+                <h1>MikeMcJay.</h1>
+                <h3 className="welcome">Welcome to my site.</h3>
                 <AboutPanel/>
                 <ProjectPanel/>
                 <ContactPanel/>

@@ -1,3 +1,7 @@
+/* Welcome */
+.welcome {
+    @apply text-gray-500;
+}
 /* About component */
 .about-panel {
     @apply flex flex-col py-10 gap-5;
@@ -67,7 +71,7 @@
     @apply grid gap-5 grid-cols-3;
 }
 .other-project {
-    @apply rounded-md flex flex-col gap-5 p-10 bg-slate-300;
+    @apply rounded-md flex flex-col gap-5 p-10 bg-slate-300 dark:bg-gray-800;
 }
 .other-project-tags {
     @apply flex flex-wrap gap-2 pt-5;

@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '../styles/navigation.css';
-@import '../styles/home.css';
+@import '../styles/components/navigation.css';
+@import '../styles/components/tag.css';
+@import '../styles/pages/home.css';
 
 /* Stylings for base components */
 @layer base {

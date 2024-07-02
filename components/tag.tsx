@@ -15,11 +15,9 @@ export function Tag({
         setTagBackgroundColour(getColour(tagID, true));
     }, []);
 
-    var className = "rounded-xl px-3";
-
     return (
         <div>
-            <div className={className} style={{ backgroundColor: tagBackgroundColour }}>
+            <div className="tag-container" style={{ backgroundColor: tagBackgroundColour }}>
                 <p className="" style={{ color: tagNameColour }}>{tagName}</p>
             </div>
         </div>
@@ -32,7 +30,7 @@ function getColour(tagID: string, dark: boolean) {
     Object.entries(colors).map((colour) => {
         if (tagID === colour[0]) {
             Object.entries(colour[1]).map((variant) => {
-                const tagShade = dark? "200" : "100";
+                const tagShade = dark? "200" : "50";
                 if (tagShade === variant[0]) {
                     tagColour = variant[1]
                 }

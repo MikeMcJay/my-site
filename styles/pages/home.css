@@ -40,7 +40,7 @@
     @apply self-end;
 }
 .project-highlight-image {
-    @apply h-96 w-auto;
+    @apply rounded-3xl h-96 w-auto;
 }
 .project-highlight-left, .project-highlight-right {
     @apply flex flex-col basis-2/5;

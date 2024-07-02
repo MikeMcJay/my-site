@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { getOtherProjects, getProjectHighlights } from "../../src/scripts/projects";
+import { getOtherProjects, getProjectBannerURL, getProjectHighlights } from "../../src/scripts/projects";
 import { Project } from "../../src/types";
 import { LinkIcon } from "../icon";
 import { Tag } from "../tag";
@@ -27,7 +27,7 @@ export default function ProjectPanel() {
         <div className="project-panel">
             <h3>Project highlights</h3>
             {Array.from(projectHighlights).map((project, index) => (
-                <ProjectHighlight key={project[0]} project={project[1]} left={!(index % 2 === 0)}/>
+                <ProjectHighlight key={project[0]} projectID={project[0]} project={project[1]} left={!(index % 2 === 0)}/>
             ))}
             <h4 className="self-center">Other projects</h4>
             <div className="other-projects-container">
@@ -40,18 +40,27 @@ export default function ProjectPanel() {
 }
 
 function ProjectHighlight({
+    projectID,
     project,
     left
 }: {
+    projectID: string,
     project: Project,
     left: boolean
 }) {
+    const [projectBannerURL, setProjectBannerURl] = useState("");
+    useEffect(() => {
+        getProjectBannerURL(projectID).then((url) => {
+            setProjectBannerURl(url);
+        })
+    }, []);
+
     return (
         <div className="project-highlight-container">
             <div className={left? "project-highlight-image-container-left" : "project-highlight-image-container-right"}>
                 <img
                     className="project-highlight-image"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    src={projectBannerURL}
                     alt="MikeMcJay"
                 />
             </div>

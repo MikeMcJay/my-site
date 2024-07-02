@@ -13,19 +13,17 @@ if (typeof window !== 'undefined') {
     const analytics = getAnalytics(app);
 }
 
-export default function configuration() {
-    // Firebase authentication service
-    const auth = getAuth();
-    // Firebase storage service
-    const storage = getStorage();
+// Firebase authentication service
+export const auth = getAuth();
     // Firebase firestore service
-    const firestore = getFirestore();
+export const db = getFirestore(app);
+    // Firebase storage service
+export const storage = getStorage();
 
+export default function configuration() {
     if (location.hostname === "127.0.0.1") {
         connectAuthEmulator(auth, "http://127.0.0.1:9099");
         connectStorageEmulator(storage, "127.0.0.1", 9199);
-        connectFirestoreEmulator(firestore, "127.0.0.1", 8080)
+        connectFirestoreEmulator(db, "127.0.0.1", 8080)
     }
 }
-
-export const db = getFirestore(app)

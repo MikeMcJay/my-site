@@ -1,5 +1,7 @@
-import React, { useEffect } from "react"
-import { TopNavBar } from "../components/navbar"
+'use client'
+
+import React, { useEffect, useState } from "react"
+import { SideNavBar, TopNavBar } from "../components/navbar"
 import AboutPanel from "../components/homepage/about"
 import ProjectPanel from "../components/homepage/projects"
 import ContactPanel from "../components/homepage/contact"
@@ -7,10 +9,13 @@ import { Footer } from "../components/footer"
 import { Diffusion } from "../components/homepage/diffusion"
 
 export default function Page() {
+    const [showSideBar, setShowSideBar] = useState(false);
+
     return (
         <div>
             <Diffusion/>
-            <TopNavBar/>
+            <TopNavBar showSideBar={ (show) => { setShowSideBar(show) } }/>
+            <SideNavBar closeSideBar={ () => { setShowSideBar(false) } } show={showSideBar}/>
             <div className="content">
                 <AboutPanel/>
                 <ProjectPanel/>

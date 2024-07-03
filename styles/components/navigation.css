@@ -5,8 +5,11 @@
 .top-nav-bar-brand {
     @apply h-14 w-auto;
 }
-.top-nav-bar-button {
-    @apply dark:text-white font-mono flex flex-row gap-10 right-10 absolute;
+.top-nav-bar-links-default {
+    @apply dark:text-white font-mono hidden md:flex flex-row gap-10 right-10 absolute;
+}
+.top-nav-bar-links-phone {
+    @apply dark:text-white md:hidden flex right-10 absolute;
 }
 /* Footer */
 .footer {

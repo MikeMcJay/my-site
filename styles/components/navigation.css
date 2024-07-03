@@ -1,6 +1,6 @@
 /* Top bar navigation stylings */
 .top-nav-bar {
-    @apply w-screen flex flex-row items-center px-10 py-2 fixed backdrop-blur-md z-10;
+    @apply h-20 w-screen flex flex-row items-center px-10 py-2 fixed backdrop-blur-md z-10;
 }
 .top-nav-bar-brand {
     @apply h-14 w-auto;
@@ -16,7 +16,7 @@
     @apply fixed h-full w-full backdrop-blur-sm dark:text-white font-mono z-10;
 }
 .side-nav-bar-links {
-    @apply flex flex-col gap-20 justify-center items-center basis-2/3 dark:bg-gray-950;
+    @apply flex flex-col gap-20 justify-center items-center basis-2/3 bg-gray-100 dark:bg-gray-950;
 }
 /* Footer */
 .footer {

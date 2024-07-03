@@ -13,11 +13,6 @@ export function TopNavBar({
 }) {
     return (
         <div className="top-nav-bar">
-            <img
-                className="top-nav-bar-brand"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="MikeMcJay"
-            />
             <div className="top-nav-bar-links-default">
                 {navigation.map((item) => (
                     <a

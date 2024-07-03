@@ -43,9 +43,9 @@ export function SideNavBar({
     closeSideBar: () => void
 }) {
     return (
-        <div className={`${show? "flex" : "hidden" } fixed h-full w-full backdrop-blur-sm dark:text-white font-mono`}>
+        <div className={`side-nav-bar ${show? "flex" : "hidden" }`}>
             <div className="basis-1/3" onClick={ closeSideBar } />
-            <div className="flex flex-col gap-20 justify-center items-center basis-2/3 dark:bg-gray-950">
+            <div className="side-nav-bar-links">
                 {navigation.map((item) => (
                     <a
                         key={item.name}

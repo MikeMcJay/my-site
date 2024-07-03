@@ -1,6 +1,6 @@
 /* Top bar navigation stylings */
 .top-nav-bar {
-    @apply w-screen flex flex-row items-center px-10 py-2 fixed backdrop-blur-md;
+    @apply w-screen flex flex-row items-center px-10 py-2 fixed backdrop-blur-md z-10;
 }
 .top-nav-bar-brand {
     @apply h-14 w-auto;
@@ -10,6 +10,13 @@
 }
 .top-nav-bar-links-phone {
     @apply dark:text-white md:hidden flex right-10 absolute;
+}
+/* Side bar navigation stylings */
+.side-nav-bar {
+    @apply fixed h-full w-full backdrop-blur-sm dark:text-white font-mono z-10;
+}
+.side-nav-bar-links {
+    @apply flex flex-col gap-20 justify-center items-center basis-2/3 dark:bg-gray-950;
 }
 /* Footer */
 .footer {

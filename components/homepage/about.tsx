@@ -1,9 +1,19 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getProfilePicture } from "../../src/scripts/about";
+import useOnScreen from "../../src/scripts/detectOnScreen";
 
 export default function AboutPanel() {
+    const ref = useRef<HTMLDivElement>(null)
+    const isVisible = useOnScreen(ref)
+    const [aboutPanelVisible, setAboutPanelVisible] = useState(false);
+    useEffect(() => {
+        if (isVisible) {
+            setAboutPanelVisible(isVisible);
+        }
+    }, [isVisible]);
+
     const [profilePictureURL, setProfilePictureURL] = useState("");
     useEffect(() => {
         getProfilePicture().then((url) => {
@@ -12,7 +22,7 @@ export default function AboutPanel() {
     }, []);
 
     return (
-        <div id="about" className="about-panel">
+        <div ref={ref} id="about" className={`about-panel ${aboutPanelVisible? "visible animate-fade-up": "invisible"}`}>
             <div className="welcome">
                 <p className="subheading1">Hi there, I'm</p>
                 <h1>MikeMcJay.</h1>

@@ -1,12 +1,22 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getOtherProjects, getProjectBannerURL, getProjectHighlights } from "../../src/scripts/projects";
 import { Project } from "../../src/types";
 import { LinkIcon } from "../icon";
 import { Tag } from "../tag";
+import useOnScreen from "../../src/scripts/detectOnScreen";
 
 export default function ProjectPanel() {
+    const ref = useRef<HTMLDivElement>(null)
+    const isVisible = useOnScreen(ref)
+    const [projectPanelVisible, setProjectPanelVisible] = useState(false);
+    useEffect(() => {
+        if (isVisible) {
+            setProjectPanelVisible(isVisible);
+        }
+    }, [isVisible]);
+
     const [projectHighlights, setProjectHighlights] = useState<Map<string, Project>>(new Map());
     const [otherProjects, setOtherProjects] = useState<Map<string, Project>>(new Map());
 
@@ -24,7 +34,7 @@ export default function ProjectPanel() {
     }, []);
 
     return (
-        <div id="projects" className="project-panel">
+        <div id="projects" ref={ref} className={`project-panel ${projectPanelVisible? "visible animate-fade-up": "invisible"}`}>
             <h3>Project highlights</h3>
             {Array.from(projectHighlights).map((project, index) => (
                 <ProjectHighlight key={project[0]} projectID={project[0]} project={project[1]} left={!(index % 2 === 0)}/>

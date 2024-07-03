@@ -75,7 +75,7 @@ function ProjectHighlight({
                 />
             </div>
             <div className={left? "project-highlight-left" : "project-highlight-right"}>
-                <p className="subheading2">Recent</p>
+                <p className="subheading2 text-lime-600">Recent</p>
                 <h4>{project.title}</h4>
                 <div className="project-highlight-details">
                     <div className="pt-5">

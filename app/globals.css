@@ -4,10 +4,14 @@
 
 @import '../styles/components/navigation.css';
 @import '../styles/components/tag.css';
+@import '../styles/components/button.css';
 @import '../styles/pages/home.css';
 
 /* Stylings for base components */
 @layer base {
+    a {
+        @apply transition ease-in-out duration-300 hover:text-sky-300;
+    }
     /* Headers */
     h1 {
         @apply text-6xl md:text-7xl font-bold;

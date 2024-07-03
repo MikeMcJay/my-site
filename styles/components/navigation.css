@@ -6,7 +6,7 @@
     @apply h-14 w-auto;
 }
 .top-nav-bar-button {
-    @apply dark:text-white font-mono flex flex-row gap-5 right-10 absolute;
+    @apply dark:text-white font-mono flex flex-row gap-10 right-10 absolute;
 }
 /* Footer */
 .footer {

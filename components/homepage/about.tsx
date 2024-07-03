@@ -12,7 +12,7 @@ export default function AboutPanel() {
     }, []);
 
     return (
-        <div className="about-panel">
+        <div id="about" className="about-panel">
             <div className="welcome">
                 <p className="subheading1">Hi there, I'm</p>
                 <h1>MikeMcJay.</h1>

@@ -36,4 +36,7 @@
     .content {
         @apply dark:bg-gray-950 dark:text-white flex flex-col pt-28 gap-32 items-center px-10;
     }
+    html {
+        scroll-behavior: smooth;
+    }
 }

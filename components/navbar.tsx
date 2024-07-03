@@ -1,9 +1,9 @@
 'use client'
 
 const navigation = [
-    { name: "About", href: "#", current: true },
-    { name: "Projects", href: "#", current: false },
-    { name: "Reach out", href: "#", current: false }
+    { name: "About", href: "#about", current: true },
+    { name: "Projects", href: "#projects", current: false },
+    { name: "Reach out", href: "#reach-out", current: false }
 ]
 
 export function TopNavBar() {

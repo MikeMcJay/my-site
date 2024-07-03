@@ -24,7 +24,7 @@ export default function ProjectPanel() {
     }, []);
 
     return (
-        <div className="project-panel">
+        <div id="projects" className="project-panel">
             <h3>Project highlights</h3>
             {Array.from(projectHighlights).map((project, index) => (
                 <ProjectHighlight key={project[0]} projectID={project[0]} project={project[1]} left={!(index % 2 === 0)}/>

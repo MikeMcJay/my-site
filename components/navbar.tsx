@@ -1,5 +1,9 @@
 'use client'
 
+import { useScrollDirection } from "../src/scripts/detectScroll"
+
+
+
 const navigation = [
     { name: "About", href: "#about", current: true },
     { name: "Projects", href: "#projects", current: false },
@@ -11,8 +15,9 @@ export function TopNavBar({
 }: {
     showSideBar: (show: boolean) => void
 }) {
+    const scrollDirection = useScrollDirection();
     return (
-        <div className="top-nav-bar">
+        <div className={`top-nav-bar ${(scrollDirection === "down")? "hidden" : "animate-fade"}`}>
             <div className="top-nav-bar-links-default">
                 {navigation.map((item) => (
                     <a
@@ -22,7 +27,7 @@ export function TopNavBar({
                 ))}
             </div>
             <div className="top-nav-bar-links-phone" onClick={() => { showSideBar(true) }}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" className="size-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-6">
                     <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </div>            
@@ -38,7 +43,7 @@ export function SideNavBar({
     closeSideBar: () => void
 }) {
     return (
-        <div className={`side-nav-bar ${show? "flex" : "hidden" }`}>
+        <div className={`side-nav-bar ${show? "flex animate-fade-left animate-duration-200 animate-ease-out" : "hidden" }`}>
             <div className="basis-1/3" onClick={ closeSideBar } />
             <div className="side-nav-bar-links">
                 {navigation.map((item) => (

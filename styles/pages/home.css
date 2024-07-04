@@ -18,7 +18,7 @@
     @apply flex basis-1/3 justify-center;
 }
 .about-panel-image {
-    @apply rounded-xl h-80 md:h-max w-auto shadow-xl;
+    @apply rounded-xl h-80 md:h-max w-auto shadow-xl -rotate-3 hover:animate-wiggle hover:animate-twice;
 }
 /* Project component */
 .project-panel {
@@ -87,4 +87,7 @@
 }
 .contact-panel-description {
     @apply max-w-screen-sm text-center;
+}
+.contact-panel-socials {
+    @apply flex flex-row gap-10 items-center;
 }

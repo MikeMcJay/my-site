@@ -14,6 +14,7 @@ export default function RootLayout({
       <html lang="en">
         <head>
           <link rel="icon" href="/static/favicon.svg" sizes="any" />
+          <title>MikeMcJay</title>
         </head>
         <body>{children}</body>
       </html>

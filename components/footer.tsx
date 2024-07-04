@@ -14,7 +14,7 @@ export function Footer() {
 
     return (
         <div ref={ref} className={`footer ${footerVisible? "visible animate-fade": "invisible"}`}>
-            <p className="caption">MikeMcJay {currentYear}</p>
+            <p className="caption">MikeMcJay {currentYear} | Made by me :O</p>
         </div>
     )
 }

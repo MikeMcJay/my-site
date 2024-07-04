@@ -2,8 +2,6 @@
 
 import { useScrollDirection } from "../src/scripts/detectScroll"
 
-
-
 const navigation = [
     { name: "About", href: "#about", current: true },
     { name: "Projects", href: "#projects", current: false },

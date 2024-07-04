@@ -6,7 +6,7 @@ export function ButtonCustom({
     onClick
 }: {
     children: ReactNode,
-    onClick: () => void
+    onClick?: () => void
 }) {
     return (
         <Button onClick={onClick} className="custom-button">{children}</Button>

@@ -18,7 +18,7 @@ export default function ContactPanel() {
             <p className="contact-panel-description">Reasons why you can get in touch with me. What I might be able to offer you and
                 all that other good stuff. Some more stuff too.
             </p>
-            <ButtonCustom>Contact me</ButtonCustom>
+            <ButtonCustom onClick={() => {}}>Contact me</ButtonCustom>
         </div>
     )
 }

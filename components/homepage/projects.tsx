@@ -6,6 +6,7 @@ import { Project } from "../../src/types";
 import { LinkIcon } from "../icon";
 import { Tag } from "../tag";
 import useOnScreen from "../../src/scripts/detectOnScreen";
+import { ButtonCustom } from "../button";
 
 export default function ProjectPanel() {
     const ref = useRef<HTMLDivElement>(null)
@@ -19,6 +20,7 @@ export default function ProjectPanel() {
 
     const [projectHighlights, setProjectHighlights] = useState<Map<string, Project>>(new Map());
     const [otherProjects, setOtherProjects] = useState<Map<string, Project>>(new Map());
+    const [showMoreProjects, setShowMoreProjects] = useState(false);
 
     useEffect(() => {
         getProjectHighlights().then((snapshot) => {
@@ -41,10 +43,14 @@ export default function ProjectPanel() {
             ))}
             <h4 className="self-center">Other projects</h4>
             <div className="other-projects-container">
-                {Array.from(otherProjects).map((project) => (
-                    <OtherProjects key={project[0]} project={project[1]}/>
-                ))}    
-            </div>       
+                {Array.from(otherProjects).map((project, index) => {
+                    if (index >= (showMoreProjects? Array.from(otherProjects).length : 6)) {
+                        return null;
+                    }
+                    return <OtherProjects key={project[0]} project={project[1]}/>
+                })}    
+            </div>
+            <ButtonCustom onClick={() => { setShowMoreProjects(!showMoreProjects) }}>{showMoreProjects? "Show less" : "Show more"}</ButtonCustom>
         </div>
     )
 }

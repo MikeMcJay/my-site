@@ -2,11 +2,13 @@ import { ReactNode } from "react";
 import { Button } from '@headlessui/react'
 
 export function ButtonCustom({
-    children
+    children,
+    onClick
 }: {
-    children: ReactNode
+    children: ReactNode,
+    onClick: () => void
 }) {
     return (
-        <Button className="custom-button">{children}</Button>
+        <Button onClick={onClick} className="custom-button">{children}</Button>
     )
 }

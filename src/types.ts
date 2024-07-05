@@ -6,6 +6,7 @@ export type Project = {
     labels: string[],
     links: string[],
     started: Timestamp,
+    end?: Timestamp | null
     subtitle: string,
     title: string
 }

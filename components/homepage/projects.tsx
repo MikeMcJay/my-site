@@ -35,6 +35,16 @@ export default function ProjectPanel() {
         });
     }, []);
 
+    // Sorted other projects array
+    const sortedOtherProjects = Array.from(otherProjects);
+    sortedOtherProjects.sort((a, b) => {
+        const timeA: Date = new Date(0);
+        timeA.setUTCSeconds(a[1].end.seconds);
+        const timeB: Date = new Date(0);
+        timeB.setUTCSeconds(b[1].end.seconds);        
+        return timeB.valueOf() - timeA.valueOf()
+    });
+
     return (
         <div id="projects" ref={ref} className={`project-panel ${projectPanelVisible? "visible animate-fade-up": "invisible"}`}>
             <h3>Project highlights</h3>
@@ -43,8 +53,8 @@ export default function ProjectPanel() {
             ))}
             <h4 className="self-center">Other projects</h4>
             <div className="other-projects-container">
-                {Array.from(otherProjects).map((project, index) => {
-                    if (index >= (showMoreProjects? Array.from(otherProjects).length : 6)) {
+                {sortedOtherProjects.map((project, index) => {
+                    if (index >= (showMoreProjects? sortedOtherProjects.length : 6)) {
                         return null;
                     }
                     return <OtherProjects key={project[0]} project={project[1]}/>
@@ -109,9 +119,15 @@ function OtherProjects({
 }: {
     project: Project
 }) {
+    const started: Date = new Date(0);
+    const finished: Date = new Date(0);
+    started.setUTCSeconds(project.started.seconds);
+    finished.setUTCSeconds(project.end.seconds);
+
     return (
         <div key={project.title} className="other-project">
             <h4>{project.title}</h4>
+            <h5>{started.toLocaleDateString([], {month: "short", year: "numeric"})} - {finished.toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
             <p>{project.subtitle}</p>
             <div className="project-highlight-tags-left">
                 {Object.entries(project.labels).map((tag) => (

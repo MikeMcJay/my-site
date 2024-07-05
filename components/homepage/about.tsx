@@ -5,14 +5,27 @@ import { getProfilePicture } from "../../src/scripts/about";
 import useOnScreen from "../../src/scripts/detectOnScreen";
 
 export default function AboutPanel() {
-    const ref = useRef<HTMLDivElement>(null)
-    const isVisible = useOnScreen(ref)
+    const refWelcome = useRef<HTMLDivElement>(null)
+    const isWelcomeVisible = useOnScreen(refWelcome)
+    const [welcomeVisible, setWelcomeVisible] = useState(false);
+    const refAbout = useRef<HTMLDivElement>(null)
+    const isAboutVisible = useOnScreen(refAbout)
     const [aboutPanelVisible, setAboutPanelVisible] = useState(false);
+    const refDescription = useRef<HTMLDivElement>(null)
+    const isDescriptionVisible = useOnScreen(refDescription)
+    const [descriptionVisible, setDescriptionVisible] = useState(false);
+
     useEffect(() => {
-        if (isVisible) {
-            setAboutPanelVisible(isVisible);
+        if (isWelcomeVisible) {
+            setWelcomeVisible(true);
         }
-    }, [isVisible]);
+        if (isAboutVisible) {
+            setAboutPanelVisible(true);
+        }
+        if (isDescriptionVisible) {
+            setDescriptionVisible(true);
+        }
+    }, [isWelcomeVisible, isAboutVisible, isDescriptionVisible]);
 
     const [profilePictureURL, setProfilePictureURL] = useState("");
     useEffect(() => {
@@ -22,14 +35,14 @@ export default function AboutPanel() {
     }, []);
 
     return (
-        <div ref={ref} className={`about-panel ${aboutPanelVisible? "visible animate-fade-up": "invisible"}`}>
-            <div className="welcome">
+        <div className={"about-panel"}>
+            <div ref={refWelcome} className={`welcome ${welcomeVisible? "visible animate-fade-up animate-delay-75": "invisible"}`}>
                 <p className="subheading1">Hi there, I'm</p>
                 <h1>MikeMcJay.</h1>
                 <h3>Welcome to my site.</h3>
             </div>
-            <h3 id="about">About</h3>
-            <div className="about-panel-description-container">
+            <h3 ref={refAbout} id="about" className={aboutPanelVisible? "visible animate-fade-up animate-delay-150": "invisible"}>About</h3>
+            <div ref={refDescription} className={`about-panel-description-container ${descriptionVisible? "visible animate-fade-up animate-delay-200": "invisible"}`}>
                 <div className="about-panel-description">
                     My actual name is Jason - MikeMcJay is just an alias I use for my developer accounts. I am a recent graduate
                     of <a href="https://ncl.ac.uk/" target="_blank" className="alt">Newcastle University</a> where I got my bachelor's 

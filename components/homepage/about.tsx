@@ -22,13 +22,13 @@ export default function AboutPanel() {
     }, []);
 
     return (
-        <div ref={ref} id="about" className={`about-panel ${aboutPanelVisible? "visible animate-fade-up": "invisible"}`}>
+        <div ref={ref} className={`about-panel ${aboutPanelVisible? "visible animate-fade-up": "invisible"}`}>
             <div className="welcome">
                 <p className="subheading1">Hi there, I'm</p>
                 <h1>MikeMcJay.</h1>
                 <h3>Welcome to my site.</h3>
             </div>
-            <h3>About</h3>
+            <h3 id="about">About</h3>
             <div className="about-panel-description-container">
                 <div className="about-panel-description">
                     My actual name is Jason - MikeMcJay is just an alias I use for my developer accounts. I am a recent graduate

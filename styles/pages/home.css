@@ -25,7 +25,7 @@
     @apply flex flex-col py-10 gap-20 xl:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm;
 }
 .project-highlight-container {
-    @apply flex flex-col md:flex-row gap-10 items-center;
+    @apply flex flex-col md:flex-row gap-10 items-center transition ease-in-out hover:-translate-y-2;
 }
 .project-highlight-image-container-left, .project-highlight-image-container-right {
     @apply flex basis-3/5 justify-center;
@@ -73,7 +73,7 @@
     @apply grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3;
 }
 .other-project {
-    @apply rounded-md flex flex-col gap-5 p-10 bg-slate-300 dark:bg-gray-800 shadow-xl;
+    @apply rounded-md flex flex-col gap-5 p-10 bg-slate-300 dark:bg-gray-800 shadow-xl transition ease-in-out hover:-translate-y-2;
 }
 .other-project-tags {
     @apply flex flex-wrap gap-2 pt-5;

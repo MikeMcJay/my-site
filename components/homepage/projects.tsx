@@ -7,6 +7,7 @@ import { LinkIcon } from "../icon";
 import { Tag } from "../tag";
 import useOnScreen from "../../src/scripts/detectOnScreen";
 import { ButtonCustom } from "../button";
+import Link from "next/link";
 
 export default function ProjectPanel() {
     const ref = useRef<HTMLDivElement>(null)
@@ -57,7 +58,7 @@ export default function ProjectPanel() {
                     if (index >= (showMoreProjects? sortedOtherProjects.length : 6)) {
                         return null;
                     }
-                    return <OtherProjects key={project[0]} project={project[1]}/>
+                    return <OtherProjects key={project[0]} projectID={project[0]} project={project[1]}/>
                 })}    
             </div>
             <ButtonCustom onClick={() => { setShowMoreProjects(!showMoreProjects) }}>{showMoreProjects? "Show less" : "Show more"}</ButtonCustom>
@@ -82,41 +83,45 @@ function ProjectHighlight({
     }, []);
 
     return (
-        <div className="project-highlight-container">
-            <div className={left? "project-highlight-image-container-left" : "project-highlight-image-container-right"}>
-                <img
-                    className="project-highlight-image"
-                    src={projectBannerURL}
-                    alt="MikeMcJay"
-                />
-            </div>
-            <div className={left? "project-highlight-left" : "project-highlight-right"}>
-                <p className="subheading2 text-lime-600">Recent</p>
-                <h4>{project.title}</h4>
-                <div className="project-highlight-details">
-                    <div className="pt-5">
-                        <p>{project.subtitle}</p>
+        <Link href={`project/${projectID}`} className="alt2">
+            <div className="project-highlight-container">
+                <div className={left? "project-highlight-image-container-left" : "project-highlight-image-container-right"}>
+                    <img
+                        className="project-highlight-image"
+                        src={projectBannerURL}
+                        alt="MikeMcJay"
+                    />
+                </div>
+                <div className={left? "project-highlight-left" : "project-highlight-right"}>
+                    <p className="subheading2 text-lime-600">Recent</p>
+                    <h4>{project.title}</h4>
+                    <div className="project-highlight-details">
+                        <div className="pt-5">
+                            <p>{project.subtitle}</p>
+                        </div>
+                        <div className={left? "project-highlight-tags-left" : "project-highlight-tags-right"}>
+                            {Object.entries(project.labels).map((tag) => (
+                                <Tag tagID={tag[0]} tagName={tag[1]}/>
+                            ))}
+                        </div>
+                        {(project.links != null) && <div className={left? "project-highlight-links-left" : "project-highlight-links-right"}>
+                            {Object.entries(project.links).map((link) => {
+                                const linkType = link[0] as "external" | "external2" | "github" | "gitlab" | "docker" | "docker2";
+                                return <LinkIcon linkType={linkType} link={link[1]}/>
+                            })}
+                        </div>}
                     </div>
-                    <div className={left? "project-highlight-tags-left" : "project-highlight-tags-right"}>
-                        {Object.entries(project.labels).map((tag) => (
-                            <Tag tagID={tag[0]} tagName={tag[1]}/>
-                        ))}
-                    </div>
-                    {(project.links != null) && <div className={left? "project-highlight-links-left" : "project-highlight-links-right"}>
-                        {Object.entries(project.links).map((link) => {
-                            const linkType = link[0] as "external" | "external2" | "github" | "gitlab" | "docker" | "docker2";
-                            return <LinkIcon linkType={linkType} link={link[1]}/>
-                        })}
-                    </div>}
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
 function OtherProjects({
+    projectID,
     project
 }: {
+    projectID: string,
     project: Project
 }) {
     const started: Date = new Date(0);
@@ -128,7 +133,9 @@ function OtherProjects({
         <div key={project.title} className="other-project">
             <h4>{project.title}</h4>
             <h5>{started.toLocaleDateString([], {month: "short", year: "numeric"})} - {finished.toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
-            <p>{project.subtitle}</p>
+            <Link href={`project/${projectID}`} className="alt2">
+                <p>{project.subtitle}</p>  
+            </Link>
             <div className="project-highlight-tags-left">
                 {Object.entries(project.labels).map((tag) => (
                     <Tag tagID={tag[0]} tagName={tag[1]}/>
@@ -140,6 +147,6 @@ function OtherProjects({
                     return <LinkIcon linkType={linkType} link={link[1]}/>
                 })}
             </div>}
-        </div>
+        </div>      
     )
 }

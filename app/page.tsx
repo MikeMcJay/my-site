@@ -8,6 +8,8 @@ import ContactPanel from "../components/homepage/contact"
 import { Footer } from "../components/footer"
 import { Diffusion } from "../components/homepage/diffusion"
 
+import '../styles/pages/home.css'
+
 export default function Page() {
     const [showSideBar, setShowSideBar] = useState(false);
 

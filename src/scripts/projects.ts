@@ -3,6 +3,11 @@ import { db, storage } from "../config";
 import { getDownloadURL, ref } from "firebase/storage";
 
 // Firestore functions
+export async function getProject(projectID: string) {
+    const projectRef = doc(db, "projects", projectID);
+    return await getDoc(projectRef);
+}
+
 export async function getProjectHighlights() {
     const projectHighlightRef = collection(db, "projects");
     const q = query(projectHighlightRef, where("isHighlight", "==", true));

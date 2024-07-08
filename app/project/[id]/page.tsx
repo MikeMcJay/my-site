@@ -49,7 +49,7 @@ export default function Page({
             <TopNavBar showSideBar={ (show) => { setShowSideBar(show) } }/>
             <SideNavBar closeSideBar={ () => { setShowSideBar(false) } } show={showSideBar}/>
             <div className="content">
-                <div className="project-panel">
+                <div className="project-panel animate-fade-up animate-delay-75">
                     {(projectBannerURL != "") && <img
                         className="project-banner"
                         src={projectBannerURL}

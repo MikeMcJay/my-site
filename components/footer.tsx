@@ -14,7 +14,7 @@ export function Footer() {
 
     return (
         <div ref={ref} className={`footer ${footerVisible? "visible animate-fade": "invisible"}`}>
-            <p className="caption">MikeMcJay {currentYear} | <a href="https://github.com/MikeMcJay/my-site" target="_blank">Made by me :O</a></p>
+            <p className="caption">MikeMcJay {currentYear} | <a href="https://github.com/MikeMcJay/my-site" className="alt" target="_blank">Made by me :O</a></p>
         </div>
     )
 }

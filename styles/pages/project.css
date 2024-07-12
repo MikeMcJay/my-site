@@ -1,3 +1,5 @@
+@import '../components/imageCarousel.css';
+
 .project-panel {
     @apply flex flex-col py-10 gap-10 xl:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm;
 }
@@ -6,7 +8,4 @@
 }
 .other-project-links {
     @apply flex flex-wrap gap-5 justify-center md:justify-start;
-}
-.project-banner {
-    @apply rounded-3xl h-auto md:h-max w-auto shadow-xl;
 }

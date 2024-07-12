@@ -1,6 +1,6 @@
 import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
 import { db, storage } from "../config";
-import { getDownloadURL, ref } from "firebase/storage";
+import { getDownloadURL, listAll, ListResult, ref } from "firebase/storage";
 
 // Firestore functions
 export async function getProject(projectID: string) {
@@ -24,4 +24,30 @@ export async function getOtherProjects() {
 export async function getProjectBannerURL(projectID: string) {
     const bannerRef = ref(storage, `images/projects/${projectID}/banner.png`);
     return getDownloadURL(bannerRef);
+}
+
+export async function getProjectImageURLs(projectID: string) {
+    const projectImagesRef = ref(storage, `images/projects/${projectID}`);
+    const projectResources = await listAll(projectImagesRef);
+    return await getImages(projectResources);
+}
+
+async function getImages(projectResources: ListResult) {
+    const imageURLs = new Map<string, string>();
+    var index = 0;
+    for (const itemRef of projectResources.items) {
+        const url = await getDownloadURL(itemRef);
+        imageURLs.set(getFileNameWithoutExtension(itemRef.name), url);
+        if (index === projectResources.items.length - 1) return (imageURLs);
+        index += 1;
+    }
+}
+
+function getFileNameWithoutExtension(filename: string) {
+    const lastDotIndex = filename.lastIndexOf(".");
+    if (lastDotIndex === -1) {
+        return filename;
+    } else {
+        return filename.substring(0, lastDotIndex);
+    }
 }

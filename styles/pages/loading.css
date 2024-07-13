@@ -1,0 +1,7 @@
+.loading-content {
+    @apply flex h-screen;
+}
+
+.logo {
+    @apply h-40 m-auto;
+}

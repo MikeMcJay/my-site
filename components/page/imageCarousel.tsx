@@ -31,7 +31,7 @@ export default function ImageCarousel({
                 style={{ backgroundImage: `url(${projectImages.get(selectedImage)})` }}
             >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="black" 
-                    className="image-carousel-next-image-left group-hover:visible"
+                    className="image-carousel-next-image-left group-hover:opacity-100"
                     onClick={() => {
                         Array.from(projectImages).map((image, index) => {
                             if (image[0] === selectedImage) {
@@ -47,7 +47,7 @@ export default function ImageCarousel({
                     <line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline>
                 </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="black" 
-                    className="image-carousel-next-image-right group-hover:visible"
+                    className="image-carousel-next-image-right group-hover:opacity-100"
                     onClick={() => {
                         Array.from(projectImages).map((image, index) => {
                             if (image[0] === selectedImage) {

@@ -3,5 +3,5 @@
 }
 
 .logo {
-    @apply h-40 m-auto;
+    @apply h-12 md:h-40 m-auto;
 }

@@ -2,7 +2,16 @@
     @apply flex flex-col gap-5;
 }
 .image-carousel-selected-image {
-    @apply bg-no-repeat bg-center bg-contain bg-gray-100 dark:bg-gray-900 rounded-3xl w-auto h-40 md:h-96 xl:h-128 shadow-xl;
+    @apply flex bg-no-repeat bg-center bg-contain bg-gray-100 dark:bg-gray-900 rounded-3xl w-auto h-40 md:h-96 xl:h-128 shadow-xl;
+}
+.image-carousel-next-image-left, .image-carousel-next-image-right {
+    @apply visible md:invisible size-10 md:size-12 self-center bg-gray-200 rounded-full;
+}
+.image-carousel-next-image-left {
+    @apply absolute self-center left-2;
+}
+.image-carousel-next-image-right {
+    @apply absolute self-center right-2;
 }
 .image-carousel-queued-scroll {
     @apply hidden md:flex flex-col flex-wrap py-10 px-1 overflow-x-auto;

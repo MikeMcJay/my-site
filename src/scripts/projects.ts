@@ -26,9 +26,9 @@ export async function getProjectBannerURL(projectID: string) {
     return getDownloadURL(bannerRef);
 }
 
-export async function getProjectImageURLs(projectID: string) {
-    const projectImagesRef = ref(storage, `images/projects/${projectID}`);
-    const projectResources = await listAll(projectImagesRef);
+export async function getProjectFileURLs(projectID: string) {
+    const projectFilesRef = ref(storage, `images/projects/${projectID}`);
+    const projectResources = await listAll(projectFilesRef);
     return await getImages(projectResources);
 }
 
@@ -37,17 +37,26 @@ async function getImages(projectResources: ListResult) {
     var index = 0;
     for (const itemRef of projectResources.items) {
         const url = await getDownloadURL(itemRef);
-        imageURLs.set(getFileNameWithoutExtension(itemRef.name), url);
+        imageURLs.set(itemRef.name, url);
         if (index === projectResources.items.length - 1) return (imageURLs);
         index += 1;
     }
 }
 
-function getFileNameWithoutExtension(filename: string) {
+export function getFileNameWithoutExtension(filename: string) {
     const lastDotIndex = filename.lastIndexOf(".");
     if (lastDotIndex === -1) {
         return filename;
     } else {
         return filename.substring(0, lastDotIndex);
+    }
+}
+
+export function getFileNameExtension(filename: string) {
+    const lastDotIndex = filename.lastIndexOf(".");
+    if (lastDotIndex === -1) {
+        return ""
+    } else {
+        return filename.substring(lastDotIndex, filename.length);
     }
 }

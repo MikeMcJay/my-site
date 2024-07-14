@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Project } from "../../../src/types";
-import { getProject, getProjectImageURLs } from "../../../src/scripts/projects";
+import { getProject, getProjectFileURLs } from "../../../src/scripts/projects";
 import { Tag } from "../../../components/tag";
 import { LinkIcon } from "../../../components/icon";
 
@@ -29,16 +29,12 @@ export default function Page({
         });
     }, []);
 
-    // const [projectBannerURL, setProjectBannerURl] = useState("");
-    const [projectImages, setProjectImages] = useState<Map<string, string>>();
+    const [projectFiles, setProjectFiles] = useState<Map<string, string>>();
     useEffect(() => {
-        // Get all project images
-        getProjectImageURLs(params.id).then((imageMap) => {
-            if (imageMap) {
-                if (imageMap.has("banner")) {
-                    // setProjectBannerURl(imageMap.get("banner"));
-                    setProjectImages(imageMap);
-                }
+        // Get all project files
+        getProjectFileURLs(params.id).then((fileMap) => {
+            if (fileMap) {
+                setProjectFiles(fileMap);
             }
         });
     }, []);
@@ -56,7 +52,7 @@ export default function Page({
             <SideNavBar closeSideBar={ () => { setShowSideBar(false) } } show={showSideBar}/>
             <div className="content">
                 <div className="project-panel animate-fade-up animate-delay-75">
-                    <ImageCarousel projectImages={projectImages}/>
+                    <ImageCarousel projectFiles={projectFiles}/>
                     <h2>{project.title}</h2>
                     <h5>{project.started.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}{(project.end != null) && " - " + project.end.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
                     <p>{project.subtitle}</p>

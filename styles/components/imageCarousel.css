@@ -1,8 +1,11 @@
 .image-carousel {
     @apply flex flex-col gap-5;
 }
-.image-carousel-selected-image {
-    @apply flex bg-no-repeat bg-center bg-contain bg-gray-100 dark:bg-gray-900 rounded-3xl w-auto h-40 md:h-96 xl:h-128 shadow-xl;
+.image-carousel-selected-file {
+    @apply flex justify-center bg-no-repeat bg-center bg-contain bg-gray-100 dark:bg-gray-900 rounded-3xl w-auto h-40 md:h-96 xl:h-128 shadow-xl;
+}
+.image-carousel-video {
+    @apply rounded-3xl;
 }
 .image-carousel-next-image-left, .image-carousel-next-image-right {
     @apply opacity-100 md:opacity-0 size-10 md:size-12 bg-gray-200 rounded-full transition ease-in-out delay-200;

@@ -87,7 +87,7 @@ function SelectedImage({
 }) {
     return (
         <div
-            className="group image-carousel-selected-image"
+            className="group image-carousel-selected-file"
             style={{ backgroundImage: `url(${projectFiles.get(selectedImage)})` }}
         >
             <CarouselControls
@@ -129,9 +129,9 @@ function SelectedVideo({
 }) {
     return (
         <div
-            className="group image-carousel-selected-image"
+            className="group image-carousel-selected-file"
         >
-            <video autoPlay controls>
+            <video className="image-carousel-video" autoPlay controls>
                 <source src={projectFiles.get(selectedVideo)}/>
             </video>
             <CarouselControls

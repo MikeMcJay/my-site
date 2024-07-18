@@ -8,7 +8,7 @@
     @apply rounded-3xl;
 }
 .image-carousel-next-image-left, .image-carousel-next-image-right {
-    @apply opacity-100 md:opacity-0 size-10 md:size-12 bg-gray-200 rounded-full transition ease-in-out delay-200;
+    @apply opacity-100 md:opacity-0 size-10 md:size-12 bg-gray-200 rounded-full transition ease-in-out duration-150;
 }
 .image-carousel-next-image-left {
     @apply absolute self-center left-2;

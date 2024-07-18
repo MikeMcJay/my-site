@@ -131,8 +131,12 @@ function OtherProjects({
 
     return (
         <div key={project.title} className="other-project">
-            <h4>{project.title}</h4>
-            <h5>{started.toLocaleDateString([], {month: "short", year: "numeric"})} - {finished.toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
+            <Link href={`project/${projectID}`} className="alt2">
+                <h4>{project.title}</h4>
+            </Link>
+            <Link href={`project/${projectID}`} className="alt2">
+                <h5>{started.toLocaleDateString([], {month: "short", year: "numeric"})} - {finished.toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
+            </Link>
             <Link href={`project/${projectID}`} className="alt2">
                 <p>{project.subtitle}</p>  
             </Link>

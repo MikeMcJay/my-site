@@ -1,6 +1,8 @@
 import { Timestamp } from "firebase/firestore"
 
 export type Project = {
+    isMarkdown: boolean,
+    markdown: string,
     details: string,
     isHighlight: boolean,
     labels: string[],

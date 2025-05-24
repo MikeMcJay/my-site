@@ -11,6 +11,8 @@ import { Diffusion } from "../../../components/homepage/diffusion";
 import { SideNavBar, TopNavBar } from "../../../components/navbar";
 import ImageCarousel from "../../../components/page/imageCarousel";
 
+import { marked } from 'marked';
+
 export default function Page({
     params
 }: {
@@ -51,7 +53,7 @@ export default function Page({
             <TopNavBar showSideBar={ (show) => { setShowSideBar(show) } }/>
             <SideNavBar closeSideBar={ () => { setShowSideBar(false) } } show={showSideBar}/>
             <div className="content">
-                <div className="project-panel animate-fade-up animate-delay-75">
+                {!project.isMarkdown && <div className="project-panel animate-fade-up animate-delay-75">
                     <ImageCarousel projectFiles={projectFiles}/>
                     <h2>{project.title}</h2>
                     <h5>{project.started.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}{(project.end != null) && " - " + project.end.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
@@ -68,7 +70,25 @@ export default function Page({
                     })}
                     </div>}
                     <p>{project.details}</p>
-                </div>
+                </div>}
+                {project.isMarkdown && <div className="project-panel project-markdown">
+                    <ImageCarousel projectFiles={projectFiles}/>
+                    <h2>{project.title}</h2>
+                    <p>{project.subtitle}</p>
+                    <h5>{project.started.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}{(project.end != null) && " - " + project.end.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
+                    <div className="project-highlight-tags">
+                        {Object.entries(project.labels).map((tag) => (
+                            <Tag tagID={tag[0]} tagName={tag[1]}/>
+                        ))}
+                    </div>
+                    {(project.links != null) && <div className="other-project-links">
+                    {Object.entries(project.links).map((link) => {
+                        const linkType = link[0] as "external" | "external2" | "github" | "gitlab" | "docker" | "docker2";
+                        return <LinkIcon linkType={linkType} link={link[1]}/>
+                    })}
+                    </div>}
+                    <div className="project-panel project-markdown animate-fade-up animate-delay-75" dangerouslySetInnerHTML={{ __html: marked.parse(project.markdown) }}></div>
+                </div>}
             </div>
         </div>
     )

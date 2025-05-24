@@ -52,7 +52,7 @@
         scroll-behavior: smooth;
     }
     .content {
-        @apply dark:text-white flex flex-col pt-28 gap-32 items-center px-10;
+        @apply dark:text-white flex flex-col pt-28 items-center px-10;
     }
     /* Scroll bar styles */
     *::-webkit-scrollbar {

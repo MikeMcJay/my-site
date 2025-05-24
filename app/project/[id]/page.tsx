@@ -53,7 +53,7 @@ export default function Page({
             <TopNavBar showSideBar={ (show) => { setShowSideBar(show) } }/>
             <SideNavBar closeSideBar={ () => { setShowSideBar(false) } } show={showSideBar}/>
             <div className="content">
-                {!project.isMarkdown && <div className="project-panel animate-fade-up animate-delay-75">
+                <div className="project-panel w-full animate-fade-up animate-delay-75">
                     <ImageCarousel projectFiles={projectFiles}/>
                     <h2>{project.title}</h2>
                     <h5>{project.started.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}{(project.end != null) && " - " + project.end.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
@@ -69,24 +69,9 @@ export default function Page({
                         return <LinkIcon linkType={linkType} link={link[1]}/>
                     })}
                     </div>}
-                    <p>{project.details}</p>
-                </div>}
+                    {!project.isMarkdown && <p>{project.details}</p>}
+                </div>
                 {project.isMarkdown && <div className="project-panel project-markdown">
-                    <ImageCarousel projectFiles={projectFiles}/>
-                    <h2>{project.title}</h2>
-                    <p>{project.subtitle}</p>
-                    <h5>{project.started.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}{(project.end != null) && " - " + project.end.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
-                    <div className="project-highlight-tags">
-                        {Object.entries(project.labels).map((tag) => (
-                            <Tag tagID={tag[0]} tagName={tag[1]}/>
-                        ))}
-                    </div>
-                    {(project.links != null) && <div className="other-project-links">
-                    {Object.entries(project.links).map((link) => {
-                        const linkType = link[0] as "external" | "external2" | "github" | "gitlab" | "docker" | "docker2";
-                        return <LinkIcon linkType={linkType} link={link[1]}/>
-                    })}
-                    </div>}
                     <div className="project-panel project-markdown animate-fade-up animate-delay-75" dangerouslySetInnerHTML={{ __html: marked.parse(project.markdown) }}></div>
                 </div>}
             </div>

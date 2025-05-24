@@ -18,7 +18,7 @@ export default function Page() {
             <Diffusion/>
             <TopNavBar showSideBar={ (show) => { setShowSideBar(show) } }/>
             <SideNavBar closeSideBar={ () => { setShowSideBar(false) } } show={showSideBar}/>
-            <div className="content">
+            <div className="content gap-32">
                 <AboutPanel/>
                 <ProjectPanel/>
                 <ContactPanel/>

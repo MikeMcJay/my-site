@@ -54,6 +54,10 @@
     .content {
         @apply dark:text-white flex flex-col pt-28 items-center px-10;
     }
+    /* The block surrounding code for the marker library */
+    pre {
+        @apply overflow-x-auto p-8 rounded-xl dark:bg-gray-800 bg-gray-100;
+    }
     /* Scroll bar styles */
     *::-webkit-scrollbar {
         @apply w-3;

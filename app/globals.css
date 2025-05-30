@@ -9,7 +9,7 @@
 /* Stylings for base components */
 @layer base {
     a {
-        @apply transition ease-in-out duration-300 hover:text-sky-300;
+        @apply transition ease-in-out duration-300 font-bold hover:text-sky-300;
     }
     a.alt {
         @apply font-bold text-sky-300 hover:text-sky-500;
@@ -54,9 +54,18 @@
     .content {
         @apply dark:text-white flex flex-col pt-28 items-center px-10;
     }
-    /* The block surrounding code for the marker library */
+    /* Marker styles */
     pre {
         @apply overflow-x-auto p-8 rounded-xl dark:bg-gray-800 bg-gray-100;
+    }
+    code {
+        @apply py-1 px-2 rounded-xl dark:bg-gray-800 bg-gray-100;
+    }
+    ul, ol {
+        @apply flex flex-col pl-4 gap-2;
+    }
+    #markdown-img {
+        @apply md:w-1/2 md:m-auto rounded-xl;
     }
     /* Scroll bar styles */
     *::-webkit-scrollbar {

@@ -12,6 +12,7 @@ import { SideNavBar, TopNavBar } from "../../../components/navbar";
 import ImageCarousel from "../../../components/page/imageCarousel";
 
 import { marked } from 'marked';
+import { ProgressBar } from "../../../components/progressBar";
 
 export default function Page({
     params
@@ -75,6 +76,7 @@ export default function Page({
                     <div className="project-panel project-markdown animate-fade-up animate-delay-75" dangerouslySetInnerHTML={{ __html: marked.parse(project.markdown) }}></div>
                 </div>}
             </div>
+            <ProgressBar enabled={project.isMarkdown}/>
         </div>
     )
 }

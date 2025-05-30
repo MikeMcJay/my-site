@@ -1,0 +1,9 @@
+.progress-bar, .progress-bar-overlay {
+    @apply fixed bottom-0 left-0 right-0 h-2 z-10 transition ease-in-out delay-200;
+}
+.progress-bar {
+    @apply dark:bg-gray-900 bg-gray-200;
+}
+.progress-bar-overlay {
+    @apply bg-sky-300 dark:bg-sky-500;
+}

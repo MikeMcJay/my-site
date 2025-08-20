@@ -36,6 +36,16 @@ export default function ProjectPanel() {
         });
     }, []);
 
+    // Sorted project highlights array
+    const sortedProjectHighlights = Array.from(projectHighlights);
+    sortedProjectHighlights.sort((a, b) => {
+        const timeA: Date = new Date(0);
+        timeA.setUTCSeconds(a[1].end.seconds);
+        const timeB: Date = new Date(0);
+        timeB.setUTCSeconds(b[1].end.seconds);        
+        return timeB.valueOf() - timeA.valueOf()
+    });
+
     // Sorted other projects array
     const sortedOtherProjects = Array.from(otherProjects);
     sortedOtherProjects.sort((a, b) => {
@@ -49,7 +59,7 @@ export default function ProjectPanel() {
     return (
         <div id="projects" ref={ref} className={`project-panel ${projectPanelVisible? "visible animate-fade-up": "invisible"}`}>
             <h3>Project highlights</h3>
-            {Array.from(projectHighlights).map((project, index) => (
+            {sortedProjectHighlights.map((project, index) => (
                 <ProjectHighlight key={project[0]} projectID={project[0]} project={project[1]} left={!(index % 2 === 0)}/>
             ))}
             <h4 className="self-center">Other projects</h4>

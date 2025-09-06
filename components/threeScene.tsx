@@ -79,6 +79,8 @@ export default function ThreeScene({
         }
         // Have the directional light follow the camera
         dirLight.target = obj;
+        // Sets the controls to focus on the model
+        controls.target = obj.position;
         scene.add(obj);
       }, undefined, function (error) {
         console.error(error);

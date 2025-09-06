@@ -67,6 +67,10 @@
     #markdown-img {
         @apply md:w-1/2 md:m-auto rounded-xl;
     }
+    /* Three.js canvas styles */
+    canvas {
+        @apply rounded-3xl;
+    }
     /* Scroll bar styles */
     *::-webkit-scrollbar {
         @apply w-3;

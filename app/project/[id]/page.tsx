@@ -55,7 +55,7 @@ export default function Page({
             <SideNavBar closeSideBar={ () => { setShowSideBar(false) } } show={showSideBar}/>
             <div className="content">
                 <div className="project-panel w-full animate-fade-up animate-delay-75">
-                    <ImageCarousel projectFiles={projectFiles}/>
+                    <ImageCarousel sceneSettings={project.sceneSettings} projectFiles={projectFiles}/>
                     <h2>{project.title}</h2>
                     <h5>{project.started.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}{(project.end != null) && " - " + project.end.toDate().toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
                     <p>{project.subtitle}</p>

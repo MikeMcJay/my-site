@@ -157,7 +157,7 @@ function OtherProjects({
             </div>
             {(project.links != null) && <div className="other-project-links">
                 {Object.entries(project.links).map((link) => {
-                    const linkType = link[0] as "external" | "external2" | "github" | "gitlab" | "docker" | "docker2";
+                    const linkType = link[0] as "external" | "external2" | "github" | "gitlab" | "docker" | "docker2" | "download";
                     return <LinkIcon linkType={linkType} link={link[1]}/>
                 })}
             </div>}

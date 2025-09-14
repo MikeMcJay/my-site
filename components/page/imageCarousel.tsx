@@ -28,9 +28,9 @@ export default function ImageCarousel({
 
     return (
         <div className="image-carousel">
-            {(getFileNameExtension(selectedFile) === ".jpg" 
-            || (getFileNameExtension(selectedFile) === ".png")
-            || (getFileNameExtension(selectedFile) === ".jpeg")
+            {(getFileNameExtension(selectedFile).toLowerCase() === ".jpg" 
+            || (getFileNameExtension(selectedFile).toLowerCase() === ".png")
+            || (getFileNameExtension(selectedFile).toLowerCase() === ".jpeg")
             ) && <SelectedImage 
                 projectFiles={projectFiles}
                 selectedImage={selectedFile}
@@ -38,14 +38,14 @@ export default function ImageCarousel({
                     setSelectedFile(selectedImage);
                 }}
             />}
-            {(getFileNameExtension(selectedFile) === ".mp4") && <SelectedVideo 
+            {(getFileNameExtension(selectedFile).toLowerCase() === ".mp4") && <SelectedVideo 
                 projectFiles={projectFiles}
                 selectedVideo={selectedFile}
                 onClickSetSelectedImage={(selectedImage) => {
                     setSelectedFile(selectedImage);
                 }}
             />}
-            {sceneSettings && (getFileNameExtension(selectedFile) === ".obj" && <SelectedThreeScene
+            {sceneSettings && (getFileNameExtension(selectedFile).toLowerCase() === ".obj" && <SelectedThreeScene
                 projectFiles={projectFiles}
                 selectedModel={selectedFile}
                 sceneSettings={sceneSettings}
@@ -57,9 +57,9 @@ export default function ImageCarousel({
                 <div className="image-carousel-queued-container">
                     {Array.from(projectFiles).map((file => {
                         // For images
-                        if (getFileNameExtension(file[0]) === ".png" 
-                        || getFileNameExtension(file[0]) === ".jpg"
-                        || getFileNameExtension(file[0]) === ".jpeg") {
+                        if (getFileNameExtension(file[0]).toLowerCase() === ".png" 
+                        || getFileNameExtension(file[0]).toLowerCase() === ".jpg"
+                        || getFileNameExtension(file[0]).toLowerCase() === ".jpeg") {
                             return (
                                 <div
                                     onClick={() => { setSelectedFile(file[0]) }}
@@ -69,7 +69,7 @@ export default function ImageCarousel({
                             )
                         }
                         // For video
-                        if (getFileNameExtension(file[0]) === ".mp4") {
+                        if (getFileNameExtension(file[0]).toLowerCase() === ".mp4") {
                             return (
                                 <div
                                     onClick={() => { setSelectedFile(file[0]) }}
@@ -82,7 +82,7 @@ export default function ImageCarousel({
                             )
                         }
                         // For three.js models
-                        if (getFileNameExtension(file[0]) === ".obj" && sceneSettings) {
+                        if (getFileNameExtension(file[0]).toLowerCase() === ".obj" && sceneSettings) {
                             return (
                                 <div
                                     onClick={() => { setSelectedFile(file[0]) }}

@@ -22,7 +22,8 @@ export type SceneSettings = {
     modelScale: ModelScale,
     modelRotation: ModelRotation,
     cameraPosition: CameraPosition,
-    controls: Controls
+    controls: Controls,
+    center?: boolean
 }
 
 export type PhysicalMesh = {

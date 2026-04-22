@@ -6,7 +6,10 @@ import {
   AmbientLight, 
   DirectionalLight,
   MeshPhysicalMaterial,
-  Color
+  Color,
+  Box3,
+  Vector3,
+  Mesh
 } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
@@ -39,6 +42,9 @@ export default function ThreeScene({
       scene.traverse(function(obj) {
         obj.castShadow = true;
         obj.receiveShadow = true;
+        if (obj.isMesh) {
+          obj.material.depthWrite = true;
+        }
       });
       // Add orbit controls
       const controls = new OrbitControls(camera, renderer.domElement);
@@ -57,30 +63,41 @@ export default function ThreeScene({
 
       // Add the ambient lighting
       const ambiLight = new AmbientLight(0xffffff, 0.4);
-      const dirLight = new DirectionalLight(0xffffff, 0.5);
+      const dirLight1 = new DirectionalLight(0xffffff, 0.2);
+      const dirLight2 = new DirectionalLight(0xffffff, 0.5);
       scene.add(ambiLight);
 
       // Load the model
       const loader = new OBJLoader();
       loader.load(model, function (obj) {
-        // Set the model position
-        obj.position.x = sceneSettings.modelPosition.x;
-        obj.position.y = sceneSettings.modelPosition.y;
-        obj.position.z = sceneSettings.modelPosition.z;
         // Set the model rotation
         obj.rotateX(Math.PI * (sceneSettings.modelRotation.x / 360));
         obj.rotateY(Math.PI * (sceneSettings.modelRotation.y / 360));
         obj.rotateZ(Math.PI * (sceneSettings.modelRotation.z / 360));
+
+        if (sceneSettings.center) {
+          // Center the model's position
+          const box = new Box3().setFromObject(obj);
+          var center = new Vector3();
+          box.getCenter(center);
+          obj.position.sub(center);
+        } else {
+          // Set the model position
+          obj.position.x = sceneSettings.modelPosition.x;
+          obj.position.y = sceneSettings.modelPosition.y;
+          obj.position.z = sceneSettings.modelPosition.z;
+        }
+
         if (sceneSettings.modelColour) {
           // If applicable, set the model colour
-          obj.traverse((mesh) => {
-            mesh.material = new MeshPhysicalMaterial({ color: parseInt(sceneSettings.modelColour), clearcoatRoughness: sceneSettings.physicalMesh.clearcoatRoughness, reflectivity: sceneSettings.physicalMesh.reflectivity, roughness: sceneSettings.physicalMesh.roughness });
+          obj.traverse((child) => {
+            if (child.isMesh) {
+                child.material = new MeshPhysicalMaterial({ color: parseInt(sceneSettings.modelColour), clearcoatRoughness: sceneSettings.physicalMesh.clearcoatRoughness, reflectivity: sceneSettings.physicalMesh.reflectivity, roughness: sceneSettings.physicalMesh.roughness });
+            }
           });
         }
         // Have the directional light follow the camera
-        dirLight.target = obj;
-        // Sets the controls to focus on the model
-        controls.target = obj.position;
+        dirLight1.target = obj;
         scene.add(obj);
       }, undefined, function (error) {
         console.error(error);
@@ -88,14 +105,22 @@ export default function ThreeScene({
 
       // Add the directional light if applicable
       if (sceneSettings.directionalLight) {
-        dirLight.position.set(
+        dirLight1.position.set(
           sceneSettings.directionalLight.x, 
           sceneSettings.directionalLight.y, 
           sceneSettings.directionalLight.z
         );
-        dirLight.castShadow = true;
-        dirLight.intensity = sceneSettings.directionalLight.intensity;
-        scene.add(dirLight);
+        dirLight2.position.set(
+          -sceneSettings.directionalLight.x, 
+          sceneSettings.directionalLight.y, 
+          -sceneSettings.directionalLight.z
+        );
+        dirLight1.castShadow = true;
+        dirLight2.castShadow = true;
+        dirLight1.intensity = sceneSettings.directionalLight.intensity;
+        dirLight2.intensity = sceneSettings.directionalLight.intensity;
+        scene.add(dirLight1);
+        scene.add(dirLight2);
       }
 
       // Set the renderer dimensions initially

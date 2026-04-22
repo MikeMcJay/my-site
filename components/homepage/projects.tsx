@@ -93,7 +93,7 @@ function ProjectHighlight({
     }, []);
 
     return (
-        <Link href={`project/${projectID}`} className="alt2">
+        <div onClick={() => window.location.href = `project/${projectID}`} className="alt2">
             <div className="project-highlight-container">
                 <div className={left? "project-highlight-image-container-left" : "project-highlight-image-container-right"}>
                     <img
@@ -111,19 +111,19 @@ function ProjectHighlight({
                         </div>
                         <div className={left? "project-highlight-tags-left" : "project-highlight-tags-right"}>
                             {Object.entries(project.labels).map((tag) => (
-                                <Tag tagID={tag[0]} tagName={tag[1]}/>
+                                <Tag key={tag[0]} tagID={tag[0]} tagName={tag[1]}/>
                             ))}
                         </div>
-                        {(project.links != null) && <div className={left? "project-highlight-links-left" : "project-highlight-links-right"}>
+                        {(project.links != null) && <div key={projectID} className={left? "project-highlight-links-left" : "project-highlight-links-right"}>
                             {Object.entries(project.links).map((link) => {
                                 const linkType = link[0] as "external" | "external2" | "github" | "gitlab" | "docker" | "docker2";
-                                return <LinkIcon linkType={linkType} link={link[1]}/>
+                                return <LinkIcon key={projectID + link[0]} linkType={linkType} link={link[1]}/>
                             })}
                         </div>}
                     </div>
                 </div>
             </div>
-        </Link>
+        </div>
     )
 }
 
@@ -152,13 +152,13 @@ function OtherProjects({
             </Link>
             <div className="project-highlight-tags-left">
                 {Object.entries(project.labels).map((tag) => (
-                    <Tag tagID={tag[0]} tagName={tag[1]}/>
+                    <Tag key={tag[0]} tagID={tag[0]} tagName={tag[1]}/>
                 ))}
             </div>
             {(project.links != null) && <div className="other-project-links">
                 {Object.entries(project.links).map((link) => {
                     const linkType = link[0] as "external" | "external2" | "github" | "gitlab" | "docker" | "docker2" | "download";
-                    return <LinkIcon linkType={linkType} link={link[1]}/>
+                    return <LinkIcon key={projectID + link[0]} linkType={linkType} link={link[1]}/>
                 })}
             </div>}
         </div>      

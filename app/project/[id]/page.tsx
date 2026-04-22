@@ -61,13 +61,13 @@ export default function Page({
                     <p>{project.subtitle}</p>
                     <div className="project-highlight-tags">
                         {Object.entries(project.labels).map((tag) => (
-                            <Tag tagID={tag[0]} tagName={tag[1]}/>
+                            <Tag key={tag[0]} tagID={tag[0]} tagName={tag[1]}/>
                         ))}
                     </div>
                     {(project.links != null) && <div className="other-project-links">
                     {Object.entries(project.links).map((link) => {
                         const linkType = link[0] as "external" | "external2" | "github" | "gitlab" | "docker" | "docker2";
-                        return <LinkIcon linkType={linkType} link={link[1]}/>
+                        return <LinkIcon key={project.title + link[0]} linkType={linkType} link={link[1]}/>
                     })}
                     </div>}
                     {!project.isMarkdown && <p>{project.details}</p>}

@@ -11,8 +11,9 @@ configuration
 console.log("\n" + 
     "%cWelcome to MikeMcJay!\n" + 
     "\n" + "\x1B[m" + 
-    "Decided to go sneaking around in the console to see what you can find 👀? It's dangerous to go alone so take this 🗡️." +
-    "\n\n" + "👉 Source code for this site: https://github.com/MikeMcJay/my-site",
+    "Decided to go sneaking around in the console to see what you can find 👀?" + 
+    "\n\n" + "👉 Sneaky easter egg: https://game.mikemcjay.com" +
+    "\n" + "👉 Source code for this site: https://github.com/MikeMcJay/my-site",
     "font-size: 2em;"
 );
 

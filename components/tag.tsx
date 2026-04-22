@@ -20,7 +20,7 @@ export function Tag({
     }, []);
 
     return (
-        <div>
+        <div key={tagID}>
             <div className="tag-container" style={{ backgroundColor: tagBackgroundColour }}>
                 <p className="" style={{ color: tagNameColour }}>{tagName}</p>
             </div>

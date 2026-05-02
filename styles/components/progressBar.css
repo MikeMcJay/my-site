@@ -7,3 +7,9 @@
 .progress-bar-overlay {
     @apply bg-sky-300 dark:bg-sky-500;
 }
+.progress-bar-image-carousel {
+    @apply h-2 z-10 transition ease-in-out delay-200;
+}
+.progress-bar-image-carousel {
+    @apply bg-sky-300 dark:bg-sky-500;
+}

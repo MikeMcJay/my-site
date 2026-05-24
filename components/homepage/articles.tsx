@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Article } from "../../src/types";
+import { Article, ArticleStatus } from "../../src/types";
 import { getArticles } from "../../src/scripts/articles";
 import Link from "next/link";
 import useOnScreen from "../../src/scripts/detectOnScreen";
@@ -21,6 +21,14 @@ export default function ArticlePanel() {
             snapshot.forEach((article) => {
                 setArticles(map => new Map(map.set(article.id, article.data() as Article)));
             });
+            // If in development mode show draft articles as well
+            if (process.env.NODE_ENV === "development") {
+                getArticles(ArticleStatus.DRAFT).then((snapshot) => {
+                    snapshot.forEach((article) => {
+                        setArticles(map => new Map(map.set(article.id, article.data() as Article)));
+                    });
+                });
+            }
         });
     }, []);
 

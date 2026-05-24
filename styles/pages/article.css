@@ -1,0 +1,6 @@
+.article-panel {
+    @apply flex flex-col py-10 gap-10 w-full xl:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm;
+}
+.article-markdown {
+    @apply w-full pt-0;
+}

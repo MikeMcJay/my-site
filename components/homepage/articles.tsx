@@ -47,7 +47,7 @@ export default function ArticlePanel() {
         <div id="articles" ref={ref} className={`article-panel ${articlesVisible? "visible animate-fade-up": "invisible"}`}>
             <div className="article-header">
                 <h3 className="article-title">Articles</h3>
-                <p>Bite sized reads about random topics that I've shown interest in, whether it be new technologies or just personal insights.</p>
+                <p>Bite-sized reads about random topics that I've shown interest in, whether it be new technologies or just personal insights.</p>
             </div>
             <div className="articles-container">
                 {sortedArticles.map((article, index) => (

@@ -4,7 +4,9 @@ export type Article = {
     title: string,
     subtitle: string,
     markdown: string,
-    created: Timestamp
+    created: Timestamp,
+    labels?: string[],
+    progressBar: boolean
 }
 
 export enum ArticleStatus {

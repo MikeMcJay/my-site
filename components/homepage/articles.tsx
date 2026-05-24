@@ -3,6 +3,7 @@ import { Article, ArticleStatus } from "../../src/types";
 import { getArticles } from "../../src/scripts/articles";
 import Link from "next/link";
 import useOnScreen from "../../src/scripts/detectOnScreen";
+import { Tag } from "../tag";
 
 export default function ArticlePanel() {
     const ref = useRef<HTMLDivElement>(null)
@@ -78,6 +79,11 @@ function ArticleInfo({
             <Link href={`article/${articleID}`} className="alt2">
                 <p>{article.subtitle}</p>  
             </Link>
+            <div className="article-tags">
+                {article.labels && Object.entries(article.labels).map((tag) => (
+                    <Tag key={tag[0]} tagID={tag[0]} tagName={tag[1]}/>
+                ))}
+            </div>
         </div>
     )
 }

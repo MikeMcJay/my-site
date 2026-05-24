@@ -1,7 +1,10 @@
+'use client'
+
 import "../styles/components/progressBar.css";
 
 import { useEffect, useState } from "react";
 import { useScrollDirection } from "../src/scripts/detectScroll";
+import confetti from "canvas-confetti";
 
 export function ProgressBar({
     enabled = false
@@ -10,6 +13,8 @@ export function ProgressBar({
 }) {
     const scrollDirection = useScrollDirection();
     const [scrollProgress, setScrollProgress] = useState(0);
+    const [celebrated, setCelebrated] = useState(false);
+
     useEffect(() => {
         const checkScroll = () => {
             const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
@@ -19,6 +24,17 @@ export function ProgressBar({
         }
         window.addEventListener("scroll", checkScroll);
     }, []);
+
+    useEffect(() => {
+        if (scrollProgress === 100 && enabled && !celebrated) {
+            confetti({
+                particleCount: Math.floor(Math.random() * 100) + 50,
+                spread: 160,
+                origin: { x: 0.5, y: 1 }
+            });
+            setCelebrated(true);
+        }
+    }, [scrollProgress, enabled, celebrated]);
 
     if (!enabled) {
         return null;

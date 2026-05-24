@@ -9,6 +9,7 @@ import { Footer } from "../components/footer"
 import { Diffusion } from "../components/homepage/diffusion"
 
 import '../styles/pages/home.css'
+import ArticlePanel from "../components/homepage/articles"
 
 export default function Page() {
     const [showSideBar, setShowSideBar] = useState(false);
@@ -20,6 +21,7 @@ export default function Page() {
             <SideNavBar closeSideBar={ () => { setShowSideBar(false) } } show={showSideBar}/>
             <div className="content gap-32">
                 <AboutPanel/>
+                <ArticlePanel/>
                 <ProjectPanel/>
                 <ContactPanel/>
                 <Footer/>

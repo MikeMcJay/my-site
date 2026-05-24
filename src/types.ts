@@ -1,5 +1,20 @@
 import { Timestamp } from "firebase/firestore"
 
+export type Article = {
+    title: string,
+    subtitle: string,
+    markdown: string,
+    created: Timestamp,
+    labels?: string[],
+    progressBar: boolean
+}
+
+export enum ArticleStatus {
+    PUBLISHED = "PUBLISHED",
+    UNPUBLISHED = "UNPUBLISHED",
+    DRAFT = "DRAFT"
+}
+
 export type Project = {
     sceneSettings?: SceneSettings,
     isMarkdown: boolean,

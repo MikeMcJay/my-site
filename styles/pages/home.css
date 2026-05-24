@@ -20,9 +20,31 @@
 .about-panel-image {
     @apply rounded-xl h-80 md:h-max w-auto shadow-xl -rotate-3 hover:animate-wiggle hover:animate-twice;
 }
+/* Article component */
+.article-panel {
+    @apply flex flex-col py-10 gap-20 xl:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm;
+}
+.article-title {
+    @apply text-start;
+}
+.articles-container {
+    @apply grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3;
+}
+.article-header {
+    @apply flex flex-col gap-5;
+}
+.article {
+    @apply rounded-md flex flex-col gap-5 p-10 bg-slate-300 dark:bg-gray-800 shadow-xl transition ease-in-out hover:-translate-y-2;
+}
+.article-tags {
+    @apply flex flex-wrap gap-2 pt-5;
+}
 /* Project component */
 .project-panel {
     @apply flex flex-col py-10 gap-20 xl:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm;
+}
+.project-highlights-header {
+    @apply flex flex-col gap-5;
 }
 .project-highlight-container {
     @apply flex flex-col md:flex-row gap-10 items-center transition ease-in-out hover:-translate-y-2;
@@ -71,6 +93,9 @@
 }
 .other-projects-container {
     @apply grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3;
+}
+.other-projects-header {
+    @apply flex flex-col gap-5 items-center text-center;
 }
 .other-project {
     @apply rounded-md flex flex-col gap-5 p-10 bg-slate-300 dark:bg-gray-800 shadow-xl transition ease-in-out hover:-translate-y-2;

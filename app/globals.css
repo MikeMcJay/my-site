@@ -51,7 +51,7 @@
     html {
         scroll-behavior: smooth;
     }
-    .content {
+    .content, .project-content, .article-content {
         @apply dark:text-white flex flex-col pt-28 items-center px-10;
     }
     /* Marker styles */

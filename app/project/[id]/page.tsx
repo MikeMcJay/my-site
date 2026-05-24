@@ -53,7 +53,7 @@ export default function Page({
             <Diffusion/>
             <TopNavBar showSideBar={ (show) => { setShowSideBar(show) } }/>
             <SideNavBar closeSideBar={ () => { setShowSideBar(false) } } show={showSideBar}/>
-            <div className="content">
+            <div className="project-content">
                 <div className="project-panel w-full animate-fade-up animate-delay-75">
                     <ImageCarousel sceneSettings={project.sceneSettings} projectFiles={projectFiles}/>
                     <h2>{project.title}</h2>

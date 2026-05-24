@@ -58,11 +58,17 @@ export default function ProjectPanel() {
 
     return (
         <div id="projects" ref={ref} className={`project-panel ${projectPanelVisible? "visible animate-fade-up": "invisible"}`}>
-            <h3>Project highlights</h3>
+            <div className="project-highlights-header">
+                <h3>Project highlights</h3>
+                <p>Noticeable projects that I'm particularly proud of.</p>
+            </div>
             {sortedProjectHighlights.map((project, index) => (
                 <ProjectHighlight key={project[0]} projectID={project[0]} project={project[1]} left={!(index % 2 === 0)}/>
             ))}
-            <h4 className="self-center">Other projects</h4>
+            <div className="other-projects-header">
+                <h4>Other projects</h4>
+                <p>All my other projects that I've worked on.</p>
+            </div>
             <div className="other-projects-container">
                 {sortedOtherProjects.map((project, index) => {
                     if (index >= (showMoreProjects? sortedOtherProjects.length : 6)) {

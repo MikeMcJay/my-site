@@ -1,6 +1,12 @@
 .article-panel {
     @apply flex flex-col py-10 gap-10 w-full xl:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm;
 }
+.article-incomplete {
+    @apply flex flex-row gap-2 items-center;
+}
+.article-incomplete-article-icon {
+    @apply size-6;
+}
 .article-markdown {
     @apply w-full pt-0;
 }

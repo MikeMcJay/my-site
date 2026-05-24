@@ -6,7 +6,9 @@ export type Article = {
     markdown: string,
     created: Timestamp,
     labels?: string[],
-    progressBar: boolean
+    progressBar: boolean,
+    status: string,
+    complete: boolean
 }
 
 export enum ArticleStatus {

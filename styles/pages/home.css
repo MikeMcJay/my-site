@@ -39,6 +39,12 @@
 .article-tags {
     @apply flex flex-wrap gap-2 pt-5;
 }
+.article-incomplete {
+    @apply flex flex-row gap-2 items-center;
+}
+.article-incomplete-article-icon {
+    @apply size-6;
+}
 /* Project component */
 .project-panel {
     @apply flex flex-col py-10 gap-20 xl:max-w-screen-xl md:max-w-screen-md sm:max-w-screen-sm;

@@ -4,6 +4,7 @@ import { useScrollDirection } from "../src/scripts/detectScroll"
 
 const navigation = [
     { name: "About", href: "/#about", current: true },
+    { name: "Articles", href: "/#articles", current: true },
     { name: "Projects", href: "/#projects", current: false },
     { name: "Reach out", href: "/#reach-out", current: false }
 ]

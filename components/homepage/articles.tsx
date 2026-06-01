@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Article, ArticleStatus } from "../../src/types";
-import { getArticles } from "../../src/scripts/articles";
+import { getArticles, getReadTime } from "../../src/scripts/articles";
 import Link from "next/link";
 import useOnScreen from "../../src/scripts/detectOnScreen";
 import { Tag } from "../tag";
@@ -80,7 +80,7 @@ function ArticleInfo({
                 </svg>
             </div>}
             <Link href={`article/${articleID}`} className="alt2">
-                <h5>{created.toLocaleDateString([], {month: "short", year: "numeric"})}</h5>
+                <h5>{created.toLocaleDateString([], {month: "short", year: "numeric"})} • {getReadTime(article.markdown)} min read</h5>
             </Link>
             <Link href={`article/${articleID}`} className="alt2">
                 <p>{article.subtitle}</p>  

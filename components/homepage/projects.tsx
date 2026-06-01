@@ -91,7 +91,7 @@ function ProjectHighlight({
     project: Project,
     left: boolean
 }) {
-    const [projectBannerURL, setProjectBannerURl] = useState("");
+    const [projectBannerURL, setProjectBannerURl] = useState(null);
     useEffect(() => {
         getProjectBannerURL(projectID).then((url) => {
             setProjectBannerURl(url);

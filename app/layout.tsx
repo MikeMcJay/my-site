@@ -23,7 +23,7 @@ export default function RootLayout({
     children: ReactNode
   }) {
     return (
-      <html lang="en">
+      <html lang="en" data-scroll-behavior="smooth">
         <head>
           <link rel="icon" href="/static/favicon.svg" sizes="any" />
           <title>MikeMcJay</title>

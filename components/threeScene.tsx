@@ -11,8 +11,8 @@ import {
   Vector3,
   Mesh
 } from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 import { SceneSettings } from "../src/types";
 
 export default function ThreeScene({

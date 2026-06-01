@@ -13,3 +13,14 @@ export async function getArticles(articleStatus: ArticleStatus = ArticleStatus.P
     const q = query(articlesRef, where("status", "==", articleStatus));
     return await getDocs(q);
 }
+
+// Determine the read time for an article
+function getWordCount(text: string) {
+    return text.trim().split(/\s+/).length;
+}
+
+export function getReadTime(text: string) {
+    const wordsPerMinute = 200; // Average reading speed
+    const wordCount = getWordCount(text);
+    return Math.ceil(wordCount / wordsPerMinute);
+}

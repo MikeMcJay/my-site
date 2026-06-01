@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 .tag-container {
     @apply rounded-xl px-3;
 }

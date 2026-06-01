@@ -306,13 +306,13 @@ function CarouselControls({
     return (
         <div className="image-carousel-controls">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="black" 
-                className="image-carousel-next-image-left group-hover:opacity-100"
+                className="image-carousel-next-image-left"
                 onClick={onClickLast}
             >
                 <line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="black" 
-                className="image-carousel-next-image-right group-hover:opacity-100"
+                className="image-carousel-next-image-right"
                 onClick={onClickNext}
             >
                 <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
@@ -332,9 +332,9 @@ function AutoPlay({
 }) {
     if (autoPlay) {
         return (
-            <div className="flex justify-center items-center w-full h-full bg-black/50">
+            <div className="image-carousel-autoplay-pause-container">
                 {/* <div className="progress-bar-image-carousel" style={{width: progress + "%"}}></div> */}
-                <div className="w-auto h-50 bg-gray-100 rounded-full stroke-width stroke-black" onClick={onClickAutoplay}>
+                <div className="image-carousel-autoplay-pause" onClick={onClickAutoplay}>
                     <svg className="size-14 fill-black" viewBox="0 -960 960 960">
                         <path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/>
                     </svg>
@@ -343,8 +343,8 @@ function AutoPlay({
         )
     } else {
         return (
-            <div className="flex justify-center items-center w-full h-full bg-black/50">
-                <div className="w-auto h-50 bg-gray-100 rounded-full stroke-width stroke-black" onClick={onClickAutoplay}>
+            <div className="image-carousel-autoplay-play-container">
+                <div className="image-carousel-autoplay-play" onClick={onClickAutoplay}>
                     <svg className="size-14 fill-black" viewBox="0 -960 960 960">
                         <path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/>
                     </svg>

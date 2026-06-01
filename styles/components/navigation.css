@@ -1,6 +1,14 @@
+@reference "tailwindcss";
+
 /* Top bar navigation stylings */
-.top-nav-bar {
-    @apply opacity-100 h-20 w-screen flex flex-row items-center px-10 py-2 fixed backdrop-blur-md z-10 transition ease-in-out delay-200;
+.top-nav-bar-show, .top-nav-bar-hide {
+    @apply h-20 w-screen flex flex-row items-center px-10 py-2 fixed backdrop-blur-md z-10 transition ease-in-out delay-200;
+}
+.top-nav-bar-show {
+    @apply opacity-100;
+}
+.top-nav-bar-hide {
+    @apply opacity-0;
 }
 .top-nav-bar-brand {
     @apply h-14 w-auto;

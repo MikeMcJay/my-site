@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@reference "tailwindcss";
+
 .image-carousel {
     @apply flex flex-col gap-5;
 }
@@ -11,10 +14,10 @@
     @apply opacity-100 md:opacity-0 size-10 md:size-12 bg-gray-200 rounded-full transition ease-in-out duration-150;
 }
 .image-carousel-next-image-left {
-    @apply absolute self-center left-2;
+    @apply absolute self-center left-2 group-hover:opacity-100;
 }
 .image-carousel-next-image-right {
-    @apply absolute self-center right-2;
+    @apply absolute self-center right-2 group-hover:opacity-100;
 }
 .image-carousel-controls {
     @apply flex self-center;
@@ -32,5 +35,11 @@
     @apply flex justify-center bg-gray-100 dark:bg-gray-900 rounded-xl w-36 h-20 md:w-56 md:h-32 shadow-xl transition ease-in-out hover:-translate-y-2;
 }
 .image-carousel-thumbnail-image-selected, .image-carousel-thumbnail-video-selected {
-    @apply outline outline-4 outline-blue-950 dark:outline-white;
+    @apply outline-4 outline-blue-950 dark:outline-white;
+}
+.image-carousel-autoplay-play-container, .image-carousel-autoplay-pause-container {
+    @apply flex justify-center items-center w-full h-full bg-black/50;
+}
+.image-carousel-autoplay-play, .image-carousel-autoplay-pause {
+    @apply w-auto bg-gray-100 rounded-full stroke-black;
 }

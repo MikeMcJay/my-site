@@ -27,7 +27,7 @@ export default function AboutPanel() {
         }
     }, [isWelcomeVisible, isAboutVisible, isDescriptionVisible]);
 
-    const [profilePictureURL, setProfilePictureURL] = useState("");
+    const [profilePictureURL, setProfilePictureURL] = useState(null);
     useEffect(() => {
         getProfilePicture().then((url) => {
             setProfilePictureURL(url);

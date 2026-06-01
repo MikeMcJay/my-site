@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 .custom-button {
-    @apply transition ease-in-out duration-300 bg-gradient-to-r bg-slate-300 dark:bg-gray-800 px-5 py-3 rounded-md hover:bg-sky-300 dark:hover:bg-sky-500;
+    @apply transition ease-in-out duration-300 bg-linear-to-r bg-slate-300 dark:bg-gray-800 px-5 py-3 rounded-md hover:bg-sky-300 dark:hover:bg-sky-500;
 }

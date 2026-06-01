@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import resolveConfig from "tailwindcss/resolveConfig"
+// import resolveConfig from "tailwindcss/resolveConfig"
 import tailwindConfig from "../tailwind.config"
-
 // Useful for getting details on the current tailwind setup
-const fullConfig = resolveConfig(tailwindConfig);
+// const fullConfig = resolveConfig(tailwindConfig);
 
 export function Tag({
     tagID,
@@ -30,13 +29,14 @@ export function Tag({
 
 function getColour(tagID: string, dark: boolean) {
     var tagColour = "#ffffff";
-    const colors = fullConfig.theme.colors;
+    // With tailwindcss v4, this is the new way to access colours from tailwind.config.js
+    const colors = tailwindConfig.theme.extend.colors;
     Object.entries(colors).map((colour) => {
         if (tagID === colour[0]) {
             Object.entries(colour[1]).map((variant) => {
                 const tagShade = dark? "200" : "50";
                 if (tagShade === variant[0]) {
-                    tagColour = variant[1]
+                    tagColour = variant[1] as string;
                 }
             })
         }

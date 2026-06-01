@@ -16,7 +16,7 @@ export function TopNavBar({
 }) {
     const scrollDirection = useScrollDirection();
     return (
-        <div className={`top-nav-bar ${(scrollDirection === "down")? "opacity-0" : "opacity-100"}`}>
+        <div className={`${(scrollDirection === "down")? "top-nav-bar-hide" : "top-nav-bar-show"}`}>
             <div className="top-nav-bar-links-default">
                 {navigation.map((item) => (
                     <a

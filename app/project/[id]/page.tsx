@@ -5,6 +5,7 @@ import { Project } from "../../../src/types";
 import { getProject, getProjectFileURLs } from "../../../src/scripts/projects";
 import { Tag } from "../../../components/tag";
 import { LinkIcon } from "../../../components/icon";
+import { useParams } from "next/navigation";
 
 import '../../../styles/pages/project.css'
 import { Diffusion } from "../../../components/homepage/diffusion";
@@ -14,13 +15,8 @@ import ImageCarousel from "../../../components/page/imageCarousel";
 import { marked } from 'marked';
 import { ProgressBar } from "../../../components/progressBar";
 
-export default function Page({
-    params
-}: {
-    params: {
-        id: string
-    }
-}) {
+export default function Page() {
+    const params = useParams<{ id: string }>();
     const [showSideBar, setShowSideBar] = useState(false);
     const [project, setProject] = useState<Project>();
 

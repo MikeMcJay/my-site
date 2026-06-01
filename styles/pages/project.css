@@ -1,3 +1,4 @@
+@reference "tailwindcss";
 @import '../components/imageCarousel.css';
 
 .project-panel {
